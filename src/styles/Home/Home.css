@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 1024px !important;
+  overflow: hidden;
+}
+
+.main {
+  width: 100%;
+  height: 1024px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("../../assets/jardin-du-parlement.jpg");
+}
+
+.welcome-title-container {
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: auto !important;
+  margin-top: -50px !important;
+  margin-bottom: none !important;
+  margin-left: none;
+  margin-right: 50%;
+}
+
+.welcome-title-bgd {
+  width: 50%;
+  height: 120px !important;
+  background-color: rgba(255, 0, 0, 0.8);
+  z-index: 1;
+  margin-top: none !important;
+  margin-bottom: none !important;
+  margin-left: none;
+  margin-right: -50%;
+}
+
+.welcome-title {
+  width: 50%;
+  height: none !important;
+  margin-top: none !important;
+  margin-bottom: none !important;
+  margin-left: -50%;
+  margin-right: none;
+  font-family: "EB Garamond", serif;
+  font-size: 30px;
+  font-weight: normal;
+  color: white;
+  z-index: 2;
+}
+
+.welcome-text-container {
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 150%;
+  height: auto !important;
+  margin-top: -50px !important;
+  margin-bottom: 200px !important;
+  margin-left: 20%;
+  margin-right: none;
+}
+
+.welcome-text-bgd {
+  width: 50%;
+  height: 250px !important;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+  margin-top: none !important;
+  margin-bottom: none !important;
+  margin-left: none;
+  margin-right: -50%;
+}
+
+.welcome-text {
+  width: 50%;
+  height: none !important;
+  margin-top: none !important;
+  margin-bottom: none !important;
+  margin-left: -50%;
+  margin-right: none;
+  font-family: "EB Garamond", serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: black;
+  z-index: 2;
+}/*# sourceMappingURL=Home.css.map */

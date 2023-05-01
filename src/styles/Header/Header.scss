@@ -1,0 +1,49 @@
+@import "../Mixins/Mixin";
+
+.Header{
+    z-index: 1;
+    @include dimensions(100%, 150px);
+    @include margin-package(none, -150px, none, none);
+}
+
+.header-bgd{
+    @include dimensions(100%, 150px);
+    background-color: rgb(255 255 255 / 0.7);
+}
+
+.header-content{
+    @include dimensions(100%, 150px);
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include margin-package(-150px, none, none, none);
+}
+
+.logo-leo-paul{
+    @include dimensions(none, 130px);
+    @include margin-package(none, none, none, 25%);
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_dimensions{
+        @include dimensions(40%, none); 
+    }
+}
+
+.menu-link{
+    @include syntaxe-garamond(24px, normal);
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-link:hover{
+    @include syntaxe-garamond(24px, normal);
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

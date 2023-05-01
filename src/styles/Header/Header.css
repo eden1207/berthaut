@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+.Header {
+  z-index: 1;
+  width: 100%;
+  height: 150px !important;
+  margin-top: none !important;
+  margin-bottom: -150px !important;
+  margin-left: none;
+  margin-right: none;
+}
+
+.header-bgd {
+  width: 100%;
+  height: 150px !important;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.header-content {
+  width: 100%;
+  height: 150px !important;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -150px !important;
+  margin-bottom: none !important;
+  margin-left: none;
+  margin-right: none;
+}
+
+.logo-leo-paul {
+  width: none;
+  height: 130px !important;
+  margin-top: none !important;
+  margin-bottom: none !important;
+  margin-left: none;
+  margin-right: 25%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation_dimensions {
+  width: 40%;
+  height: none !important;
+}
+
+.menu-link {
+  font-family: "EB Garamond", serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu-link:hover {
+  font-family: "EB Garamond", serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}/*# sourceMappingURL=Header.css.map */

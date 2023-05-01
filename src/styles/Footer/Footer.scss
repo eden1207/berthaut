@@ -1,0 +1,38 @@
+@import "../Mixins/Mixin";
+
+.Footer{
+    z-index: 1;
+    @include dimensions(100%, auto);
+    @include margin-package(-150px, none, none, none);
+}
+
+.footer-menu-bgd{
+    z-index: 1;
+    @include dimensions(100%, 150px);
+    background-color: rgb(0 0 0 / 0.9);
+    @include margin-package(none, -150px, none, none);
+}
+
+.footer-menu{
+    z-index: 2;
+    @include dimensions(50%, 120px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: transparent;
+    @include padding-package(10px, 20px, 2%, 38%);
+}
+
+.menu-link-footer{
+    @include syntaxe-garamond(20px, normal);
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-link-footer:hover{
+    @include syntaxe-garamond(20px, normal);
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
