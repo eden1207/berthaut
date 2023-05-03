@@ -1,1 +1,1 @@
-{"version":3,"sources":["ErrorPage.scss","ErrorPage.css"],"names":[],"mappings":"AAEA;EACI,sBAAA;ACDJ","file":"ErrorPage.css"}
+{"version":3,"sources":["../Mixins/Mixin.scss","ErrorPage.scss","ErrorPage.css"],"names":[],"mappings":"AAAQ,wPAAA;ACER;EACI,sBAAA;ACAJ","file":"ErrorPage.css"}

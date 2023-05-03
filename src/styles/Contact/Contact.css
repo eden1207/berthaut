@@ -1,3 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
 .Contact {
-  border: 1px blue solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 1024px !important;
+  overflow: hidden;
+}
+
+.main-home {
+  width: 100%;
+  height: 1024px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-bgd {
+  z-index: 1;
+  margin-top: -1024px !important;
+  margin-bottom: none !important;
+  margin-left: none;
+  margin-right: none;
+  width: none;
+  height: 1024px !important;
+}
+
+.contact-page-container {
+  width: 100%;
+  height: 1024px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  gap: 15%;
+}
+
+.contact-data {
+  margin-top: 100px !important;
+  margin-bottom: none !important;
+  margin-left: 4%;
+  margin-right: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  height: 450px !important;
+  font-family: "EB Garamond", serif;
+  font-size: 20px;
+  font-weight: normal;
+  background-color: rgba(236, 28, 36, 0.9);
+  color: white;
+  z-index: 3;
+  list-style: none;
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+  padding-left: none;
+  padding-right: 3%;
+}
+
+.contact-data-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-btn {
+  border: none;
+  width: 150px;
+  height: 50px !important;
+  border-radius: 10px;
+  background-color: black;
+  font-family: "EB Garamond", serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: white;
+  cursor: pointer;
+}
+
+.map-container {
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  height: auto !important;
+  margin-top: none !important;
+  margin-bottom: 170px !important;
+  margin-left: none;
+  margin-right: none;
+}
+
+.map-bgd {
+  width: 84%;
+  height: 460px !important;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  margin-top: none !important;
+  margin-bottom: none !important;
+  margin-left: none;
+  margin-right: -50%;
+}
+
+.map {
+  width: 70%;
+  height: none !important;
+  margin-top: none !important;
+  margin-bottom: none !important;
+  margin-left: -50%;
+  margin-right: none;
+  font-family: "EB Garamond", serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: black;
+  z-index: 2;
+}
+
+/* form */
+.form-bgd {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: none;
+  left: 0;
+  right: none;
+  z-index: 3;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.form-bgd_dimensions {
+  width: 100%;
+  height: 1024px !important;
+}
+
+.form-content {
+  background: #EC1C24;
+  overflow: hidden;
+  color: #fff;
+  position: relative;
+  top: none;
+  bottom: none;
+  left: none;
+  right: none;
+}
+.form-content_dimensions {
+  width: 100%;
+  height: 650px !important;
+  max-width: 500px;
+}
+.form-content_border {
+  margin-top: 2% !important;
+  margin-bottom: 2% !important;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  padding-top: 5px !important;
+  padding-bottom: none !important;
+  padding-left: none;
+  padding-right: none;
+}
+.form-content_animation {
+  animation-name: modalopen;
+  animation-duration: 0.4s;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.form-close-btn {
+  position: absolute;
+  top: 25px;
+  bottom: none;
+  left: none;
+  right: 25px;
+  cursor: pointer;
+  color: white;
+  background-color: #EC1C24;
+  border: none;
+  font-size: 30px;
+}
+
+.form-close-btn img {
+  width: 32px;
+  height: auto !important;
+}
+
+.form-content h3 {
+  color: white;
+  font-family: "EB Garamond", serif;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal-body_dimensions {
+  width: auto;
+  height: auto !important;
+}
+.modal-body_border {
+  margin-top: -40px !important;
+  margin-bottom: none !important;
+  margin-left: none;
+  margin-right: none;
+  padding-top: 2px !important;
+  padding-bottom: 10px !important;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+label {
+  position: absolute;
+  top: -10000px;
+  bottom: none;
+  left: 0;
+  right: none;
+  overflow: hidden;
+  width: 1px;
+  height: 1px !important;
+}
+
+input {
+  /*@include padding-package(8px, 8px, 8px, 8px);*/
+  border: 1px black solid;
+}
+
+.text-control {
+  font-size: 20px;
+}
+.text-control_dimensions {
+  width: 100%;
+  height: 20px !important;
+}
+.text-control_border {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5px;
+}
+
+.text-control-message {
+  font-size: 20px;
+}
+.text-control-message_dimensions {
+  width: 100%;
+  height: 180px !important;
+}
+.text-control-message_border {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5px;
+}
+
+.btn-submit {
+  background-color: black;
+  font-family: "EB Garamond", serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-submit_dimensions {
+  width: 160px;
+  height: 45px !important;
+}
+.btn-submit_border {
+  margin-top: none !important;
+  margin-bottom: 5px !important;
+  margin-left: none;
+  margin-right: none;
+  border: 0;
+  border-radius: 10px;
+}
+
+.error-message {
+  font-family: "EB Garamond", serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #d6d6d6;
+  width: 100%;
+  height: none !important;
+  margin-top: -1px !important;
+  margin-bottom: -15px !important;
+  margin-left: 2%;
+  margin-right: none;
+  text-align: left;
+}
+
+.file-message {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "EB Garamond", serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: #fff;
+  width: 100%;
+  height: none !important;
+}
+
+.file-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  width: 35px;
+  height: 35px !important;
+  cursor: pointer;
+  font-family: "EB Garamond", serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: #fff;
+  background-color: black;
 }/*# sourceMappingURL=Contact.css.map */

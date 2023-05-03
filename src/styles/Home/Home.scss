@@ -9,17 +9,31 @@
     overflow: hidden;
 }
 
-.main{
+.main-home{
+    @include dimensions(100%, 1024px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-page-bgd{
+    z-index: 1;
+    @include margin-package(-1024px, none, none, none);
+    @include dimensions(none, 1300px);
+}
+
+.main-content{
     @include dimensions(100%, 1024px);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background-image: url("../../assets/jardin-du-parlement.jpg");
+    background-color: transparent;
 }
 
 .welcome-title-container{
-    z-index: 2;
+    z-index: 3;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -29,7 +43,7 @@
 
 .welcome-title-bgd{
     @include dimensions(50%, 120px);
-    background-color: rgb(255 0 0 / 0.8);
+    background-color: rgb(236 28 36 / 0.9);
     z-index: 1;
     @include margin-package(none, none, none, -50%);
 }
@@ -39,22 +53,22 @@
     @include margin-package(none, none, -50%, none);
     @include syntaxe-garamond(30px, normal);
     color: white;
-    z-index: 2;
+    z-index: 3;
 }
 
 .welcome-text-container{
-    z-index: 1;
+    z-index: 2;
     display: flex;
     justify-content: space-around;
     align-items: center;
     @include dimensions(150%, auto);
-    @include margin-package(-50px, 200px, 20%, none);
+    @include margin-package(-50px, 100px, 20%, none);
 }
 
 .welcome-text-bgd{
     @include dimensions(50%, 250px);
     background-color: rgb(255 255 255 / 0.7);
-    z-index: 1;
+    z-index: 2;
     @include margin-package(none, none, none, -50%);
 }
 

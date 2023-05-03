@@ -1,7 +1,7 @@
 @import "../Mixins/Mixin";
 
 .Header{
-    z-index: 1;
+    z-index: 2;
     @include dimensions(100%, 150px);
     @include margin-package(none, -150px, none, none);
 }

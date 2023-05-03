@@ -1,5 +1,74 @@
 @import "../Mixins/Mixin";
 
 .Honorarium{
-    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @include dimensions(100%, 1024px);
+    overflow: hidden;
+}
+
+.main-honorarium{
+    @include dimensions(100%, 1024px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.honorarium-page-bgd{
+    z-index: 1;
+    @include margin-package(-1024px, none, none, none);
+    @include dimensions(none, 1024px);
+}
+
+.honorarium-container{
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include dimensions(80%, auto);
+    @include margin-package(280px, none, 30%, none);
+}
+
+.honorarium-color-bgd{
+    @include dimensions(70%, 550px);
+    background-color: rgb(236 28 36 / 0.9);
+    z-index: 1;
+    @include margin-package(none, none, none, -50%);
+}
+
+.justice-symbole{
+    z-index: 1;
+    @include dimensions(30%, none);
+    opacity: 0.7;
+}
+
+.honorarium-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    @include dimensions(50%, 400px);
+    @include margin-package(none, none, -44%, none);
+    @include syntaxe-garamond(24px, normal);
+    color: white;
+    list-style: none;
+    text-align: center;
+    z-index: 3;
+}
+
+.honorarium-list-link{
+    @include syntaxe-garamond(24px, normal);
+    color: white;
+    text-decoration: none;
+    cursor: pointer;  
+}
+
+.honorarium-list-link:hover{
+    @include syntaxe-garamond(24px, normal);
+    color: white;
+    text-decoration: none;
+    cursor: pointer;  
 }

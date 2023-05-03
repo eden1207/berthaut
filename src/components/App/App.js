@@ -13,9 +13,9 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path={'/'} element={<Home />} />
-        <Route path='/introduction' element={<Introduction />} />
-        <Route path='/honorarium' element={<Honorarium />} />
-        <Route path='*' element={<ErrorPage />} />
+        <Route path={'/introduction'} element={<Introduction />} />
+        <Route path={'/honorarium'} element={<Honorarium />} />
+        <Route path={'*'} element={<ErrorPage />} />
         <Route path={'/contact'} element={<Contact />} />
       </Routes>
     </div>
