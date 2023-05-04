@@ -1,16 +1,18 @@
 @import "../Mixins/Mixin";
 
+$screenHeigth: 1024px;
+
 .Home{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    @include dimensions(100%, 1024px);
+    @include dimensions(100%, $screenHeigth);
     overflow: hidden;
 }
 
 .main-home{
-    @include dimensions(100%, 1024px);
+    @include dimensions(100%, $screenHeigth);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -19,12 +21,12 @@
 
 .home-page-bgd{
     z-index: 1;
-    @include margin-package(-1024px, none, none, none);
+    @include margin-package(-$screenHeigth, none, none, none);
     @include dimensions(none, 1300px);
 }
 
 .main-content{
-    @include dimensions(100%, 1024px);
+    @include dimensions(100%, $screenHeigth);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

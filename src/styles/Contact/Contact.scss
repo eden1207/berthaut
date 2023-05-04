@@ -29,22 +29,65 @@
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    gap: 15%;
+    @media all and (min-width: 992px) {
+        justify-content: center;
+        align-items: center;
+        gap: 15%;
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        /*gap: 15%;*/
+    }
+    @media all and (max-width: 440px) {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        /*gap: 15%;*/
+    }
 }
 
 .contact-data{
-    @include margin-package(100px, none, 4%, none);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    @include dimensions(30%, 450px);
-    @include syntaxe-garamond(20px, normal);
     background-color: rgb(236 28 36 / 0.9);
     color: white;
     z-index: 3;
     list-style: none;
-    @include padding-package(50px, 50px, none, 3%);
+    @media all and (min-width: 992px) {
+        @include margin-package(100px, none, 4%, none);
+        @include padding-package(60px, 70px, none, 3%);
+        @include dimensions(30%, 420px);
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include margin-package(100px, none, 2%, none);
+        @include padding-package(50px, 60px, none, 5%);
+        @include dimensions(40%, 380px);
+        @include syntaxe-garamond(18px, normal);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include margin-package(160px, none, none, none);
+        @include padding-package(5px, 15px, none, 6%);
+        @include dimensions(75%, 250px);
+        max-width: 350px;
+        @include syntaxe-garamond(16px, normal);
+    }
+    @media all and (max-width: 440px) {
+        @include margin-package(160px, none, none, none);
+        @include padding-package(25px, 35px, none, 10%);
+        @include dimensions(70%, 270px);
+        max-width: 250px;
+        @include syntaxe-garamond(14px, normal);
+    }
 }
 
 .contact-data-element{
@@ -56,39 +99,31 @@
 
 .contact-btn{
     border: none;
-    @include dimensions(150px, 50px);
     border-radius: 10px;
     background-color: black;
-    @include syntaxe-garamond(20px, normal);
     color: white;
     cursor: pointer;
+    @media all and (min-width: 992px) {
+        @include dimensions(150px, 50px);
+        @include margin-package(70px, none, none, none);
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(135px, 45px);
+        @include margin-package(40px, none, none, none);
+        @include syntaxe-garamond(18px, normal);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include dimensions(130px, 40px);
+        @include margin-package(10px, none, none, none);
+        @include syntaxe-garamond(16px, normal);
+    }
+    @media all and (max-width: 440px) {
+        @include dimensions(130px, 40px);
+        @include margin-package(40px, none, none, none);
+        @include syntaxe-garamond(14px, normal);
+    }
 }
-
-.map-container{
-    z-index: 2;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    @include dimensions(40%, auto);
-    @include margin-package(none, 170px, none, none);
-}
-
-.map-bgd{
-    @include dimensions(84%, 460px);
-    background-color: rgb(255 255 255 / 0.7);
-    z-index: 2;
-    @include margin-package(none, none, none, -50%);
-}
-
-.map{
-    @include dimensions(70%, none);
-    @include margin-package(none, none, -50%, none);
-    @include syntaxe-garamond(24px, normal);
-    color: black;
-    z-index: 2;
-}
-
-
 
 /* form */
 

@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
-//import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 import '../../styles/Contact/Contact.css'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
+import Map from '../Map/Map'
 import contact_bgd from '../../assets/Belvedere-Bouroullec-Bretagne.jpg'
-import image_map from '../../assets/image_map.JPG'
 import close_btn from '../../assets/close.svg'
 import { GiSmartphone } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaFileImport } from "react-icons/fa";
+
 
 export default function Contact() {
     const [isFormOpen, setIsFormOpen] = useState(false);
@@ -143,10 +143,10 @@ export default function Contact() {
                             8 Rue du Bourg Nouveau <br/> 1er Etage <br />35000 Rennes
                         </li>
                         <li className='contact-data-element'>
-                            <GiSmartphone /> numéro tél
+                            <GiSmartphone /> 07 89 07 10 84
                         </li>
                         <li className='contact-data-element'>
-                            <MdOutlineEmail /> email
+                            <MdOutlineEmail /> lp.berthaut.avocat@gmail.com
                         </li>
                         <li>
                             <button 
@@ -160,10 +160,7 @@ export default function Contact() {
                             </button>
                         </li>
                     </ul>
-                    <div className='map-container'>
-                        <div className='map-bgd'></div>
-                        <img src={image_map} className='map' alt='google map' />
-                    </div>
+                    <Map />
                 </div>
                 <img src={contact_bgd} className='contact-bgd' alt='fond page contact' />
             </main>

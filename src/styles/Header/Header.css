@@ -16,25 +16,70 @@
 }
 
 .header-content {
-  width: 100%;
-  height: 150px !important;
   background-color: transparent;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   margin-top: -150px !important;
   margin-bottom: none !important;
   margin-left: none;
   margin-right: none;
 }
+@media all and (min-width: 992px) {
+  .header-content {
+    justify-content: space-around;
+    width: 100%;
+    height: 150px !important;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .header-content {
+    justify-content: space-around;
+    width: 100%;
+    height: 150px !important;
+  }
+}
+@media all and (max-width: 767px) {
+  .header-content {
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: none;
+    padding-right: none;
+    width: 100%;
+    height: 130px !important;
+  }
+}
 
-.logo-leo-paul {
-  width: none;
-  height: 130px !important;
-  margin-top: none !important;
-  margin-bottom: none !important;
-  margin-left: none;
-  margin-right: 25%;
+@media all and (min-width: 992px) {
+  .logo-leo-paul {
+    width: none;
+    height: 130px !important;
+    margin-top: none !important;
+    margin-bottom: none !important;
+    margin-left: none;
+    margin-right: 25%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .logo-leo-paul {
+    width: none;
+    height: 110px !important;
+    margin-top: none !important;
+    margin-bottom: none !important;
+    margin-left: none;
+    margin-right: 25%;
+  }
+}
+@media all and (max-width: 767px) {
+  .logo-leo-paul {
+    width: none;
+    height: 90px !important;
+    margin-top: none !important;
+    margin-bottom: none !important;
+    margin-left: none;
+    margin-right: none;
+  }
 }
 
 .navigation {
@@ -42,25 +87,95 @@
   justify-content: space-between;
   align-items: center;
 }
-.navigation_dimensions {
-  width: 40%;
-  height: none !important;
+@media all and (min-width: 992px) {
+  .navigation_dimensions {
+    width: 40%;
+    height: none !important;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .navigation_dimensions {
+    width: 50%;
+    height: none !important;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .navigation_dimensions {
+    width: 75%;
+    height: none !important;
+  }
+}
+@media all and (max-width: 440px) {
+  .navigation_dimensions {
+    width: 90%;
+    height: none !important;
+  }
 }
 
 .menu-link {
-  font-family: "EB Garamond", serif;
-  font-size: 24px;
-  font-weight: normal;
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
+@media all and (min-width: 992px) {
+  .menu-link {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .menu-link {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .menu-link {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .menu-link {
+    font-family: "EB Garamond", serif;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
 
 .menu-link:hover {
-  font-family: "EB Garamond", serif;
-  font-size: 24px;
-  font-weight: normal;
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+@media all and (min-width: 992px) {
+  .menu-link:hover {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .menu-link:hover {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .menu-link:hover {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .menu-link:hover {
+    font-family: "EB Garamond", serif;
+    font-size: 14px;
+    font-weight: normal;
+  }
 }/*# sourceMappingURL=Header.css.map */
