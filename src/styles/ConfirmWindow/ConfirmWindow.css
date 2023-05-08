@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+.confirmWindow-bgd {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: none;
+  left: 0;
+  right: none;
+  z-index: 3;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.confirmWindow-bgd_dimensions {
+  width: 100%;
+  height: 1024px !important;
+}
+
+.confirmWindow-content {
+  background: #EC1C24;
+  overflow: hidden;
+  color: #fff;
+  position: relative;
+  top: none;
+  bottom: none;
+  left: none;
+  right: none;
+}
+.confirmWindow-content_dimensions {
+  width: 100%;
+  height: 650px !important;
+}
+@media all and (min-width: 992px) {
+  .confirmWindow-content_dimensions {
+    max-width: 500px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .confirmWindow-content_dimensions {
+    max-width: 450px;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .confirmWindow-content_dimensions {
+    max-width: 400px;
+  }
+}
+@media all and (max-width: 440px) {
+  .confirmWindow-content_dimensions {
+    max-width: 270px;
+  }
+}
+.confirmWindow-content_border {
+  margin-top: 2% !important;
+  margin-bottom: 2% !important;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  padding-top: 5px !important;
+  padding-bottom: none !important;
+  padding-left: none;
+  padding-right: none;
+}
+.confirmWindow-content_animation {
+  animation-name: modalopen;
+  animation-duration: 0.4s;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.confirmWindow-close-btn {
+  cursor: pointer;
+  color: white;
+  background-color: #EC1C24;
+  border: none;
+  font-size: 30px;
+}
+@media all and (min-width: 992px) {
+  .confirmWindow-close-btn {
+    position: absolute;
+    top: 25px;
+    bottom: none;
+    left: none;
+    right: 25px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .confirmWindow-close-btn {
+    position: absolute;
+    top: 20px;
+    bottom: none;
+    left: none;
+    right: 20px;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .confirmWindow-close-btn {
+    position: absolute;
+    top: 15px;
+    bottom: none;
+    left: none;
+    right: 15px;
+  }
+}
+@media all and (max-width: 440px) {
+  .confirmWindow-close-btn {
+    position: absolute;
+    top: 10px;
+    bottom: none;
+    left: none;
+    right: 10px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .confirmWindow-close-btn img {
+    width: 32px;
+    height: auto !important;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .confirmWindow-close-btn img {
+    width: 30px;
+    height: auto !important;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .confirmWindow-close-btn img {
+    width: 25px;
+    height: auto !important;
+  }
+}
+@media all and (max-width: 440px) {
+  .confirmWindow-close-btn img {
+    width: 20px;
+    height: auto !important;
+  }
+}
+
+.confirmWindow-content h3 {
+  margin-top: 220px !important;
+  margin-bottom: none !important;
+  margin-left: none;
+  margin-right: none;
+  color: white;
+}
+@media all and (min-width: 992px) {
+  .confirmWindow-content h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 28px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .confirmWindow-content h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 26px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .confirmWindow-content h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .confirmWindow-content h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 22px;
+    font-weight: normal;
+  }
+}
+
+.ConfirmBtn {
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+}
+@media all and (min-width: 992px) {
+  .ConfirmBtn {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .ConfirmBtn {
+    font-family: "EB Garamond", serif;
+    font-size: 22px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .ConfirmBtn {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .ConfirmBtn {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 992px) {
+  .ConfirmBtn_dimensions {
+    width: 160px;
+    height: 45px !important;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .ConfirmBtn_dimensions {
+    width: 140px;
+    height: 42px !important;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .ConfirmBtn_dimensions {
+    width: 120px;
+    height: 38px !important;
+  }
+}
+@media all and (max-width: 440px) {
+  .ConfirmBtn_dimensions {
+    width: 100px;
+    height: 35px !important;
+  }
+}
+.ConfirmBtn_border {
+  margin-top: 230px !important;
+  margin-bottom: none !important;
+  margin-left: none;
+  margin-right: none;
+  border: 0;
+  border-radius: 10px;
+}/*# sourceMappingURL=ConfirmWindow.css.map */

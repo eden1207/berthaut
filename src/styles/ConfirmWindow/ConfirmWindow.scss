@@ -1,0 +1,142 @@
+@import "../Mixins/Mixin";
+
+.confirmWindow-bgd {
+    display: block;
+    @include position-package(fixed, 0, none, 0, none);
+    z-index: 3;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    &_dimensions{
+        @include dimensions(100%, 1024px);
+    }
+}
+
+.confirmWindow-content {
+    background: #EC1C24;
+    overflow: hidden;
+    color: #fff;
+    @include position-package(relative, none, none, none, none);
+    &_dimensions{
+        @include dimensions(100%, 650px);
+        @media all and (min-width: 992px) {
+            max-width: 500px;
+        }
+        @media all and (min-width: 768px) and (max-width: 991px) {
+            max-width: 450px;
+        }
+        @media all and (min-width: 441px) and (max-width: 767px) {
+            max-width: 400px;
+        }
+        @media all and (max-width: 440px) {
+            max-width: 270px;
+        }
+    }
+    &_border{
+        @include margin-package(2%, 2%, auto, auto);
+        border-radius: 10px;
+        @include padding-package(5px, none, none, none);
+    }
+    &_animation{
+        animation-name: modalopen;
+        animation-duration: 0.4s;
+    }
+}
+
+@keyframes modalopen {
+    from {
+      opacity: 0;
+      transform: translateY(-150px);
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.confirmWindow-close-btn{
+    cursor: pointer;
+    color: white;
+    background-color: #EC1C24;
+    border: none;
+    font-size: 30px;
+    @media all and (min-width: 992px) {
+        @include position-package(absolute, 25px, none, none, 25px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include position-package(absolute, 20px, none, none, 20px);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include position-package(absolute, 15px, none, none, 15px);
+    }
+    @media all and (max-width: 440px) {
+        @include position-package(absolute, 10px, none, none, 10px);
+    }
+}
+
+.confirmWindow-close-btn img {
+    @media all and (min-width: 992px) {
+        @include dimensions(32px, auto);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(30px, auto);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include dimensions(25px, auto);
+    }
+    @media all and (max-width: 440px) {
+        @include dimensions(20px, auto);
+    }
+}
+
+.confirmWindow-content h3 {
+    @include margin-package(220px, none, none, none);
+    color: white;
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(28px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(26px, normal);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include syntaxe-garamond(24px, normal);
+    }
+    @media all and (max-width: 440px) {
+        @include syntaxe-garamond(22px, normal);
+    }
+}
+
+.ConfirmBtn {
+    background-color: black;
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(24px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(22px, normal);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (max-width: 440px) {
+        @include syntaxe-garamond(18px, normal);
+    }
+    color: #fff;
+    cursor: pointer;
+    &_dimensions{
+      @media all and (min-width: 992px) {
+        @include dimensions(160px, 45px);
+      }
+      @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(140px, 42px);
+      }
+      @media all and (min-width: 441px) and (max-width: 767px) {
+        @include dimensions(120px, 38px);
+      }
+      @media all and (max-width: 440px) {
+        @include dimensions(100px, 35px);
+      }
+    }
+    &_border{
+      @include margin-package(230px, none, none, none);
+      border: 0;
+      border-radius: 10px;
+    }
+}

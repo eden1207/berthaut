@@ -1,135 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useDispatch } from "react-redux";
+import { openForm } from "../Store/Store.js";
 import '../../styles/Contact/Contact.css'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Map from '../Map/Map'
+import Form from '../Form/Form'
+import ConfirmWindow from '../ConfirmWindow/ConfirmWindow'
 import contact_bgd from '../../assets/Belvedere-Bouroullec-Bretagne.jpg'
-import close_btn from '../../assets/close.svg'
 import { GiSmartphone } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
-import { FaFileImport } from "react-icons/fa";
 
 
 export default function Contact() {
-    const [isFormOpen, setIsFormOpen] = useState(false);
-
-
-    function FormInput({ labelFor, inputClass, type, id, name, placeholder, ariaRequired }) {
-        const isError = false;
-        return isError ? (
-            <React.Fragment>
-                <label htmlFor={labelFor}>{placeholder}</label><br />
-                <input 
-                    className={inputClass} 
-                    type={type}
-                    id={id} 
-                    name={name} 
-                    placeholder={placeholder}
-                    aria-required={ariaRequired} 
-                /><br />
-                <p className='error-message'>Erreur d'input</p>
-            </React.Fragment>
-        ): (
-            <React.Fragment>
-                <label htmlFor={labelFor}>{placeholder}</label><br />
-                <input 
-                    className={inputClass} 
-                    type={type}
-                    id={id} 
-                    name={name} 
-                    placeholder={placeholder}
-                    aria-required={ariaRequired} 
-                /><br />
-            </React.Fragment>
-        )
-    }
-
-    function Form({ isFormOpen }) {
-        return isFormOpen ? (
-            <div className="form-bgd form-bgd_dimensions" role="dialog">
-                <div className="form-content form-content_dimensions form-content_border form-content_animation" aria-label="formulaire">
-                    <button 
-                        className="form-close-btn" 
-                        type="button" 
-                        onClick={() => {
-                            setIsFormOpen(false)
-                        }}
-                    >
-                        <img src={close_btn} alt="bouton fermeture" />
-                    </button>
-                    <h3>Contactez-moi <br />Léo-Paul Berthaut</h3>
-                    <div className="modal-body modal-body_dimensions modal-body_border">
-                        <form id="JS-myForm" role="group" aria-labelledby="coordonnees">
-                            <FormInput 
-                                labelFor={"JS-first"}
-                                inputClass={"text-control text-control_dimensions text-control_border"} 
-                                type={"text"} 
-                                id={"JS-first"} 
-                                name={"first"} 
-                                placeholder={'Prénom'} 
-                                ariaRequired={true} 
-                            />
-                            <FormInput 
-                                labelFor={"JS-last"}
-                                inputClass={"text-control text-control_dimensions text-control_border"} 
-                                type={"text"} 
-                                id={"JS-last"} 
-                                name={"last"} 
-                                placeholder={'Nom'} 
-                                ariaRequired={true} 
-                            />
-                            <FormInput 
-                                labelFor={"JS-email"}
-                                inputClass={"text-control text-control_dimensions text-control_border"} 
-                                type={"email"} 
-                                id={"JS-email"} 
-                                name={"email"} 
-                                placeholder={'Email'} 
-                                ariaRequired={true} 
-                            />
-                            <FormInput 
-                                labelFor={"JS-message"}
-                                inputClass={"text-control-message text-control-message_dimensions text-control-message_border"} 
-                                type={"text"} 
-                                id={"JS-message"} 
-                                name={"message"} 
-                                placeholder={'Votre message ici'} 
-                                ariaRequired={true} 
-                            />
-                            <p className='file-message'>
-                                Veuillez transmettre vos documents pdf ici 
-                                <button 
-                                    className='file-btn' 
-                                    type="button"
-                                    onClick={(e) => {
-                                        e.preventDefault()
-                                    }}
-                                >
-                                    <FaFileImport />
-                                </button>
-                            </p>
-                            <button 
-                                id="JS-btn-submit" 
-                                className="btn-submit btn-submit_dimensions btn-submit_border button" 
-                                type="submit" onClick={(e) => {
-                                    e.preventDefault()
-                                }}
-                            >
-                                Envoyer
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        ) : (
-            null
-        )
-    }
-
-
-
-
-
+    const dispatch = useDispatch();
     return(
         <div className='Contact Contact_dimensions'>
             <Header />
@@ -153,7 +37,7 @@ export default function Contact() {
                                 className='contact-btn' 
                                 type="button"
                                 onClick={() => {
-                                    setIsFormOpen(true)
+                                    dispatch(openForm())
                                 }}
                             >
                                 Me contacter
@@ -165,7 +49,8 @@ export default function Contact() {
                 <img src={contact_bgd} className='contact-bgd' alt='fond page contact' />
             </main>
             <Footer />
-            <Form isFormOpen={isFormOpen}/>
+            <Form />
+            <ConfirmWindow />
         </div>
     )
 }

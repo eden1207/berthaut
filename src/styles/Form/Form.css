@@ -1,0 +1,573 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+.form-bgd {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: none;
+  left: 0;
+  right: none;
+  z-index: 3;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.form-bgd_dimensions {
+  width: 100%;
+  height: 1024px !important;
+}
+
+.form-content {
+  background: #EC1C24;
+  overflow: hidden;
+  color: #fff;
+  position: relative;
+  top: none;
+  bottom: none;
+  left: none;
+  right: none;
+}
+.form-content_dimensions {
+  width: 100%;
+  height: 650px !important;
+}
+@media all and (min-width: 992px) {
+  .form-content_dimensions {
+    max-width: 500px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .form-content_dimensions {
+    max-width: 450px;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .form-content_dimensions {
+    max-width: 400px;
+  }
+}
+@media all and (max-width: 440px) {
+  .form-content_dimensions {
+    max-width: 270px;
+  }
+}
+.form-content_border {
+  margin-top: 2% !important;
+  margin-bottom: 2% !important;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  padding-top: 5px !important;
+  padding-bottom: none !important;
+  padding-left: none;
+  padding-right: none;
+}
+.form-content_animation {
+  animation-name: modalopen;
+  animation-duration: 0.4s;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.form-close-btn {
+  cursor: pointer;
+  color: white;
+  background-color: #EC1C24;
+  border: none;
+  font-size: 30px;
+}
+@media all and (min-width: 992px) {
+  .form-close-btn {
+    position: absolute;
+    top: 25px;
+    bottom: none;
+    left: none;
+    right: 25px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .form-close-btn {
+    position: absolute;
+    top: 20px;
+    bottom: none;
+    left: none;
+    right: 20px;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .form-close-btn {
+    position: absolute;
+    top: 15px;
+    bottom: none;
+    left: none;
+    right: 15px;
+  }
+}
+@media all and (max-width: 440px) {
+  .form-close-btn {
+    position: absolute;
+    top: 10px;
+    bottom: none;
+    left: none;
+    right: 10px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .form-close-btn img {
+    width: 32px;
+    height: auto !important;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .form-close-btn img {
+    width: 30px;
+    height: auto !important;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .form-close-btn img {
+    width: 25px;
+    height: auto !important;
+  }
+}
+@media all and (max-width: 440px) {
+  .form-close-btn img {
+    width: 20px;
+    height: auto !important;
+  }
+}
+
+.form-content h3 {
+  color: white;
+}
+@media all and (min-width: 992px) {
+  .form-content h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 28px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .form-content h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 26px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .form-content h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .form-content h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 22px;
+    font-weight: normal;
+  }
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal-body_dimensions {
+  width: auto;
+  height: auto !important;
+}
+.modal-body_border {
+  margin-top: -40px !important;
+  margin-bottom: none !important;
+  margin-left: none;
+  margin-right: none;
+}
+@media all and (min-width: 992px) {
+  .modal-body_border {
+    padding-top: 2px !important;
+    padding-bottom: 10px !important;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .modal-body_border {
+    padding-top: 2px !important;
+    padding-bottom: 10px !important;
+    padding-left: 6%;
+    padding-right: 10%;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .modal-body_border {
+    padding-top: 2px !important;
+    padding-bottom: 10px !important;
+    padding-left: 5%;
+    padding-right: 10%;
+  }
+}
+@media all and (max-width: 440px) {
+  .modal-body_border {
+    padding-top: 2px !important;
+    padding-bottom: 10px !important;
+    padding-left: 5%;
+    padding-right: 10%;
+  }
+}
+
+label {
+  position: absolute;
+  top: -10000px;
+  bottom: none;
+  left: 0;
+  right: none;
+  overflow: hidden;
+  width: 1px;
+  height: 1px !important;
+}
+
+input {
+  /*@include padding-package(8px, 8px, 8px, 8px);*/
+  border: 1px black solid;
+}
+
+@media all and (min-width: 992px) {
+  .text-control {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .text-control {
+    font-family: "EB Garamond", serif;
+    font-size: 17px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .text-control {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .text-control {
+    font-family: "EB Garamond", serif;
+    font-size: 15px;
+    font-weight: normal;
+  }
+}
+.text-control_dimensions {
+  width: 100%;
+  height: 20px !important;
+}
+.text-control_border {
+  border-radius: 5px;
+}
+@media all and (min-width: 992px) {
+  .text-control_border {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .text-control_border {
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .text-control_border {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+@media all and (max-width: 440px) {
+  .text-control_border {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .text-control-message {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .text-control-message {
+    font-family: "EB Garamond", serif;
+    font-size: 17px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .text-control-message {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .text-control-message {
+    font-family: "EB Garamond", serif;
+    font-size: 15px;
+    font-weight: normal;
+  }
+}
+.text-control-message_dimensions {
+  width: 100%;
+  height: 180px !important;
+}
+.text-control-message_border {
+  border-radius: 5px;
+}
+@media all and (min-width: 992px) {
+  .text-control-message_border {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .text-control-message_border {
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .text-control-message_border {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+@media all and (max-width: 440px) {
+  .text-control-message_border {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.btn-submit {
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+}
+@media all and (min-width: 992px) {
+  .btn-submit {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .btn-submit {
+    font-family: "EB Garamond", serif;
+    font-size: 22px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .btn-submit {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .btn-submit {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 992px) {
+  .btn-submit_dimensions {
+    width: 160px;
+    height: 45px !important;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .btn-submit_dimensions {
+    width: 140px;
+    height: 42px !important;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .btn-submit_dimensions {
+    width: 120px;
+    height: 38px !important;
+  }
+}
+@media all and (max-width: 440px) {
+  .btn-submit_dimensions {
+    width: 100px;
+    height: 35px !important;
+  }
+}
+.btn-submit_border {
+  margin-top: none !important;
+  margin-bottom: 5px !important;
+  margin-left: none;
+  margin-right: none;
+  border: 0;
+  border-radius: 10px;
+}
+
+.error-message {
+  color: #d6d6d6;
+  width: 100%;
+  height: none !important;
+  margin-top: 1px !important;
+  margin-bottom: -15px !important;
+  margin-left: 2%;
+  margin-right: none;
+  text-align: left;
+}
+@media all and (min-width: 992px) {
+  .error-message {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .error-message {
+    font-family: "EB Garamond", serif;
+    font-size: 15px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .error-message {
+    font-family: "EB Garamond", serif;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .error-message {
+    font-family: "EB Garamond", serif;
+    font-size: 13px;
+    font-weight: normal;
+  }
+}
+
+.file-message {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  width: 100%;
+  height: none !important;
+}
+@media all and (min-width: 992px) {
+  .file-message {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .file-message {
+    font-family: "EB Garamond", serif;
+    font-size: 17px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .file-message {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .file-message {
+    font-family: "EB Garamond", serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+    margin-top: none !important;
+    margin-bottom: none !important;
+    margin-left: 3%;
+    margin-right: none;
+  }
+}
+
+.file-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: black;
+}
+@media all and (min-width: 992px) {
+  .file-btn {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+    width: 35px;
+    height: 35px !important;
+    border-radius: 10px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .file-btn {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: normal;
+    width: 32px;
+    height: 32px !important;
+    border-radius: 8px;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .file-btn {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: normal;
+    width: 27px;
+    height: 27px !important;
+    border-radius: 6px;
+  }
+}
+@media all and (max-width: 440px) {
+  .file-btn {
+    font-family: "EB Garamond", serif;
+    font-size: 14px;
+    font-weight: normal;
+    width: 25px;
+    height: 25px !important;
+    border-radius: 4px;
+  }
+}/*# sourceMappingURL=Form.css.map */

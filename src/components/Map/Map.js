@@ -26,7 +26,7 @@ export default function Map(){
     const map = useRef(null);
     const [lng] = useState(-1.666);
     const [lat] = useState(48.1106);
-    const [zoom] = useState(10);
+    const [zoom] = useState(10.5);
     const [API_KEY] = useState(process.env.REACT_APP_MAP_API_KEY);
 
     useEffect(() => {
