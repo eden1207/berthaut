@@ -6,35 +6,27 @@
   justify-content: center;
   align-items: center;
   background-color: rgb(255 255 255 / 0.7);
+  position: absolute;
   @media all and (min-width: 992px) {
-    @include dimensions(455px, 455px);
-    @include margin-package(none, 170px, none, none);
+    top: 220px;
+    right: 3%;
+    @include dimensions(415px, 415px);
+    @include padding-package(25px, 25px, 25px, 25px);
   }
   @media all and (min-width: 768px) and (max-width: 991px) {
-    @include dimensions(355px, 355px);
-    @include margin-package(none, 220px, none, none);
-  }
-  @media all and (min-width: 441px) and (max-width: 767px) {
-    @include dimensions(400px, 400px);
-    @include margin-package(none, 170px, none, none);
-  }
-  @media all and (max-width: 440px) {
-    @include dimensions(280px, 280px);
-    @include margin-package(none, 170px, none, none);
-  }
-}
-
-.Map {
-  @media all and (min-width: 992px) {
-    @include dimensions(400px, 400px);
-  }
-  @media all and (min-width: 768px) and (max-width: 991px) {
+    top: 210px;
+    right: 2%;
     @include dimensions(300px, 300px);
+    @include padding-package(15px, 15px, 15px, 15px);
   }
   @media all and (min-width: 441px) and (max-width: 767px) {
-    @include dimensions(340px, 340px);
+    top: 850px;
+    @include dimensions(350px, 350px);
+    @include padding-package(15px, 15px, 15px, 15px);
   }
   @media all and (max-width: 440px) {
-    @include dimensions(250px, 250px);
+    top: 800px;
+    @include dimensions(280px, 280px);
+    @include padding-package(10px, 10px, 10px, 10px);
   }
 }

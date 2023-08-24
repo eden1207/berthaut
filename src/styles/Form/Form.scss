@@ -2,7 +2,7 @@
 
 .form-bgd {
     display: block;
-    @include position-package(fixed, 0, none, 0, none);
+    @include position-package(absolute, 0, none, 0, none);
     z-index: 3;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.6);
@@ -15,20 +15,35 @@
     background: #EC1C24;
     overflow: hidden;
     color: #fff;
-    @include position-package(relative, none, none, none, none);
+    @media all and (min-width: 992px) {
+        @include position-package(relative, 5px, none, none, none);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include position-package(relative, 10px, none, none, none);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include position-package(relative, 20px, none, none, none);
+    }
+    @media all and (max-width: 440px) {
+        @include position-package(relative, 30px, none, none, none);
+    }
     &_dimensions{
         @include dimensions(100%, 650px);
         @media all and (min-width: 992px) {
+            @include dimensions(100%, 650px);
             max-width: 500px;
         }
         @media all and (min-width: 768px) and (max-width: 991px) {
+            @include dimensions(100%, 640px);
             max-width: 450px;
         }
         @media all and (min-width: 441px) and (max-width: 767px) {
+            @include dimensions(100%, 620px);
             max-width: 400px;
         }
         @media all and (max-width: 440px) {
-            max-width: 270px;
+            @include dimensions(100%, 600px);
+            max-width: 320px;
         }
     }
     &_border{

@@ -1,83 +1,201 @@
 @import "../Mixins/Mixin";
 
-$screenHeigth: 1024px;
-
 .Home{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    @include dimensions(100%, $screenHeigth);
-    overflow: hidden;
 }
 
 .main-home{
-    @include dimensions(100%, $screenHeigth);
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    min-height: 1000px;
+    @include dimensions(100%, none);
+    overflow: hidden;
 }
 
-.home-page-bgd{
+.welcome-text-bgd {
     z-index: 1;
-    @include margin-package(-$screenHeigth, none, none, none);
-    @include dimensions(none, 1300px);
+    position: absolute;
+    background-color: rgb(0 0 0 / 0.55);
+    @media all and (min-width: 992px) {
+        top: 590px;
+        left: 1%;
+        @include dimensions(96%, 400px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        top: 480px;
+        left: 1%;
+        @include dimensions(97%, 450px);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        top: 430px;
+        left: 0px;
+        @include dimensions(99%, 500px);
+    }
+    @media all and (max-width: 440px) {
+        top: 300px;
+        left: 0px;
+        @include dimensions(100%, 600px);
+    }
+}
+
+.home-page-bgd-border {
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @media all and (min-width: 992px) {
+        top: 0px;
+        @include dimensions(100%, 730px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        top: 0px;
+        @include dimensions(100%, 560px);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        top: 150px;
+        @include dimensions(100%, 320px);
+    }
+    @media all and (max-width: 440px) {
+        top: 150px;
+        @include dimensions(100%, 170px);
+    }
+}
+
+.home-page-bgd {
+    @include dimensions(100%, auto);
 }
 
 .main-content{
-    @include dimensions(100%, $screenHeigth);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background-color: transparent;
 }
 
 .welcome-title-container{
     z-index: 3;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    @include dimensions(80%, auto);
-    @include margin-package(-50px, none, none, 50%);
-}
-
-.welcome-title-bgd{
-    @include dimensions(50%, 120px);
+    @media all and (min-width: 992px) {
+        @include dimensions(40%, 100px);
+        top: 600px;
+        left: 5%;
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(50%, 70px);
+        top: 500px;
+        left: 4%;
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include dimensions(85%, 20px);
+        top: 450px;
+        left: 2%;
+    }
+    @media all and (max-width: 440px) {
+        @include dimensions(85%, 20px);
+        top: 310px;
+        left: 2%;
+    }
     background-color: rgb(236 28 36 / 0.9);
-    z-index: 1;
-    @include margin-package(none, none, none, -50%);
+    color: white;
+    @include padding-package(75px, 75px, none, none);
+    position: absolute;
 }
 
-.welcome-title{
-    @include dimensions(50%, none);
-    @include margin-package(none, none, -50%, none);
-    @include syntaxe-garamond(30px, normal);
-    color: white;
-    z-index: 3;
+.welcome-title-container h1{
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(34px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(30px, normal);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include syntaxe-garamond(26px, normal);
+    }
+    @media all and (max-width: 440px) {
+        @include syntaxe-garamond(22px, normal);
+    }
+}
+
+.welcome-title-container h2{
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(26px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(22px, normal);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include syntaxe-garamond(18px, normal);
+    }
+    @media all and (max-width: 440px) {
+        @include syntaxe-garamond(14px, normal);
+    }
 }
 
 .welcome-text-container{
+    position: absolute;
     z-index: 2;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
-    @include dimensions(150%, auto);
-    @include margin-package(-50px, 100px, 20%, none);
-}
-
-.welcome-text-bgd{
-    @include dimensions(50%, 250px);
-    background-color: rgb(255 255 255 / 0.7);
-    z-index: 2;
-    @include margin-package(none, none, none, -50%);
-}
-
-.welcome-text{
-    @include dimensions(50%, none);
-    @include margin-package(none, none, -50%, none);
-    @include syntaxe-garamond(24px, normal);
+    @media all and (min-width: 992px) {
+        @include dimensions(60%, 120px);
+        gap: 2%;
+        top: 800px;
+        right: 5%;
+        padding-right: 10%;
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(70%, 80px);
+        gap: 2%;
+        top: 700px;
+        right: 4%;
+        padding-right: 8%;
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include dimensions(85%, 50px);
+        gap: 2%;
+        top: 610px;
+        right: 2%;
+        padding-right: 4%;
+    }
+    @media all and (max-width: 440px) {
+        @include dimensions(85%, 50px);
+        gap: 2%;
+        top: 470px;
+        right: 2%;
+        padding-right: 4%;
+    }
+    background-color: rgb(255 255 255 / 0.85);
     color: black;
-    z-index: 2;
+}
+
+.welcome-text-container p{
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(24px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include syntaxe-garamond(14px, normal);
+    }
+    @media all and (max-width: 440px) {
+        @include syntaxe-garamond(10px, normal);
+    }
+}
+
+.divider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

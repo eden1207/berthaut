@@ -5,43 +5,80 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    @include dimensions(100%, 1024px);
+    @include dimensions(100%, auto);
     overflow: hidden;
 }
 
 .main-introduction{
-    @include dimensions(100%, 1024px);
+    @include dimensions(100%, auto);
+    min-height: 1080px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.leo-paul-photo{
+.black-area{
+    position: absolute;
     z-index: 1;
-    background-color: #d6d6d6;
-    @include dimensions(150%, 1024px);
+    background-color: rgb(0 0 0 / 0.65);
+    @media all and (min-width: 992px) {
+        top: 210px;
+        left: 5%;
+        @include dimensions(60%, 550px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        top: 210px;
+        left: 3%;
+        @include dimensions(70%, 550px);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        top: 210px;
+        left: 3%;
+        @include dimensions(80%, 550px);
+    }
+    @media all and (max-width: 440px) {
+        top: 210px;
+        left: 3%;
+        @include dimensions(90%, 550px);
+    }
 }
 
 .introduction-container{
+    position: absolute;
     z-index: 3;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    @include dimensions(80%, auto);
-    @include margin-package(280px, none, 30%, none);
-}
-
-.presentation-color-bgd{
-    @include dimensions(240%, 350px);
     background-color: rgb(236 28 36 / 0.9);
-    z-index: 1;
-    @include margin-package(none, none, -250%, none);
-}
-
-.presentation-text{
-    @include dimensions(250%, 300px);
-    @include margin-package(none, none, -300%, none);
-    @include syntaxe-garamond(24px, normal);
     color: white;
-    z-index: 3;
+    text-align: justify;
+    @media all and (min-width: 992px) {
+        top: 300px;
+        right: 5%;
+        @include syntaxe-garamond(22px, normal);
+        @include dimensions(50%, auto);
+        @include padding-package(75px, 75px, 8%, 8%);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        top: 300px;
+        right: 3%;
+        @include syntaxe-garamond(20px, normal);
+        @include dimensions(60%, auto);
+        @include padding-package(55px, 55px, 8%, 8%);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        top: 300px;
+        right: 3%;
+        @include syntaxe-garamond(18px, normal);
+        @include dimensions(70%, auto);
+        @include padding-package(35px, 35px, 8%, 8%);
+    }
+    @media all and (max-width: 440px) {
+        top: 300px;
+        right: 3%;
+        @include syntaxe-garamond(16px, normal);
+        @include dimensions(75%, auto);
+        @include padding-package(25px, 25px, 8%, 8%);
+    }
 }

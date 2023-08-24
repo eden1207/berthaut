@@ -3,12 +3,14 @@
 .Header{
     z-index: 2;
     @include dimensions(100%, 150px);
-    @include margin-package(none, -150px, none, none);
+    position: absolute;
 }
 
 .header-bgd{
     @include dimensions(100%, 150px);
-    background-color: rgb(255 255 255 / 0.7);
+    /*background-color: rgb(0 0 0 / 0.35);*/
+    background-color: rgb(0 0 0 / 0.10);
+    box-shadow: 1px 1px 10px rgb(0 0 0 / 0.60);
 }
 
 .header-content{
@@ -80,6 +82,7 @@
     @media all and (max-width: 440px) {
         @include syntaxe-garamond(14px, normal);
     }
+    /*color: white;*/
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -98,6 +101,7 @@
     @media all and (max-width: 440px) {
         @include syntaxe-garamond(14px, normal);
     }
+    /*color: white;*/
     color: black;
     text-decoration: none;
     cursor: pointer;

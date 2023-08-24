@@ -4,112 +4,292 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
-  height: 1024px !important;
-  overflow: hidden;
 }
 
 .main-home {
-  width: 100%;
-  height: 1024px !important;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  min-height: 1000px;
+  width: 100%;
+  height: none !important;
+  overflow: hidden;
+}
+
+.welcome-text-bgd {
+  z-index: 1;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+@media all and (min-width: 992px) {
+  .welcome-text-bgd {
+    top: 590px;
+    left: 1%;
+    width: 96%;
+    height: 400px !important;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .welcome-text-bgd {
+    top: 480px;
+    left: 1%;
+    width: 97%;
+    height: 450px !important;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .welcome-text-bgd {
+    top: 430px;
+    left: 0px;
+    width: 99%;
+    height: 500px !important;
+  }
+}
+@media all and (max-width: 440px) {
+  .welcome-text-bgd {
+    top: 300px;
+    left: 0px;
+    width: 100%;
+    height: 600px !important;
+  }
+}
+
+.home-page-bgd-border {
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media all and (min-width: 992px) {
+  .home-page-bgd-border {
+    top: 0px;
+    width: 100%;
+    height: 730px !important;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .home-page-bgd-border {
+    top: 0px;
+    width: 100%;
+    height: 560px !important;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .home-page-bgd-border {
+    top: 150px;
+    width: 100%;
+    height: 320px !important;
+  }
+}
+@media all and (max-width: 440px) {
+  .home-page-bgd-border {
+    top: 150px;
+    width: 100%;
+    height: 170px !important;
+  }
 }
 
 .home-page-bgd {
-  z-index: 1;
-  margin-top: -1024px !important;
-  margin-bottom: none !important;
-  margin-left: none;
-  margin-right: none;
-  width: none;
-  height: 1300px !important;
+  width: 100%;
+  height: auto !important;
 }
 
 .main-content {
-  width: 100%;
-  height: 1024px !important;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background-color: transparent;
 }
 
 .welcome-title-container {
   z-index: 3;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 80%;
-  height: auto !important;
-  margin-top: -50px !important;
-  margin-bottom: none !important;
-  margin-left: none;
-  margin-right: 50%;
-}
-
-.welcome-title-bgd {
-  width: 50%;
-  height: 120px !important;
   background-color: rgba(236, 28, 36, 0.9);
-  z-index: 1;
-  margin-top: none !important;
-  margin-bottom: none !important;
-  margin-left: none;
-  margin-right: -50%;
+  color: white;
+  padding-top: 75px !important;
+  padding-bottom: 75px !important;
+  padding-left: none;
+  padding-right: none;
+  position: absolute;
+}
+@media all and (min-width: 992px) {
+  .welcome-title-container {
+    width: 40%;
+    height: 100px !important;
+    top: 600px;
+    left: 5%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .welcome-title-container {
+    width: 50%;
+    height: 70px !important;
+    top: 500px;
+    left: 4%;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .welcome-title-container {
+    width: 85%;
+    height: 20px !important;
+    top: 450px;
+    left: 2%;
+  }
+}
+@media all and (max-width: 440px) {
+  .welcome-title-container {
+    width: 85%;
+    height: 20px !important;
+    top: 310px;
+    left: 2%;
+  }
 }
 
-.welcome-title {
-  width: 50%;
-  height: none !important;
-  margin-top: none !important;
-  margin-bottom: none !important;
-  margin-left: -50%;
-  margin-right: none;
-  font-family: "EB Garamond", serif;
-  font-size: 30px;
-  font-weight: normal;
-  color: white;
-  z-index: 3;
+@media all and (min-width: 992px) {
+  .welcome-title-container h1 {
+    font-family: "EB Garamond", serif;
+    font-size: 34px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .welcome-title-container h1 {
+    font-family: "EB Garamond", serif;
+    font-size: 30px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .welcome-title-container h1 {
+    font-family: "EB Garamond", serif;
+    font-size: 26px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .welcome-title-container h1 {
+    font-family: "EB Garamond", serif;
+    font-size: 22px;
+    font-weight: normal;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .welcome-title-container h2 {
+    font-family: "EB Garamond", serif;
+    font-size: 26px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .welcome-title-container h2 {
+    font-family: "EB Garamond", serif;
+    font-size: 22px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .welcome-title-container h2 {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .welcome-title-container h2 {
+    font-family: "EB Garamond", serif;
+    font-size: 14px;
+    font-weight: normal;
+  }
 }
 
 .welcome-text-container {
+  position: absolute;
   z-index: 2;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
-  width: 150%;
-  height: auto !important;
-  margin-top: -50px !important;
-  margin-bottom: 100px !important;
-  margin-left: 20%;
-  margin-right: none;
-}
-
-.welcome-text-bgd {
-  width: 50%;
-  height: 250px !important;
-  background-color: rgba(255, 255, 255, 0.7);
-  z-index: 2;
-  margin-top: none !important;
-  margin-bottom: none !important;
-  margin-left: none;
-  margin-right: -50%;
-}
-
-.welcome-text {
-  width: 50%;
-  height: none !important;
-  margin-top: none !important;
-  margin-bottom: none !important;
-  margin-left: -50%;
-  margin-right: none;
-  font-family: "EB Garamond", serif;
-  font-size: 24px;
-  font-weight: normal;
+  background-color: rgba(255, 255, 255, 0.85);
   color: black;
-  z-index: 2;
+}
+@media all and (min-width: 992px) {
+  .welcome-text-container {
+    width: 60%;
+    height: 120px !important;
+    gap: 2%;
+    top: 800px;
+    right: 5%;
+    padding-right: 10%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .welcome-text-container {
+    width: 70%;
+    height: 80px !important;
+    gap: 2%;
+    top: 700px;
+    right: 4%;
+    padding-right: 8%;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .welcome-text-container {
+    width: 85%;
+    height: 50px !important;
+    gap: 2%;
+    top: 610px;
+    right: 2%;
+    padding-right: 4%;
+  }
+}
+@media all and (max-width: 440px) {
+  .welcome-text-container {
+    width: 85%;
+    height: 50px !important;
+    gap: 2%;
+    top: 470px;
+    right: 2%;
+    padding-right: 4%;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .welcome-text-container p {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .welcome-text-container p {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .welcome-text-container p {
+    font-family: "EB Garamond", serif;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .welcome-text-container p {
+    font-family: "EB Garamond", serif;
+    font-size: 10px;
+    font-weight: normal;
+  }
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=Home.css.map */

@@ -1,27 +1,50 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import '../../styles/Home/Home.css'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
-import home_page_bgd from '../../assets/jardin-du-parlement.jpg'
+import PersonnalDataForm from '../PersonnalDataForm/PersonnalDataForm'
+import LegalForm from '../LegalForm/LegalForm'
+import home_page_bgd from '../../assets/jardin-du-parlement1.jpg'
+import { RxDividerHorizontal } from "react-icons/rx";
+import { useSelector } from 'react-redux'
+
 
 export default function Home() {
+    const isPersonnalDataFormOpen = useSelector((state) => state.isPersonnalDataFormOpen);
+    const isLegalFormOpen = useSelector((state) => state.isLegalFormOpen);
+    useEffect(() => {
+        if (isPersonnalDataFormOpen || isLegalFormOpen) {
+          document.body.style.overflow = 'hidden';
+          window.scrollTo(0, 0);
+        } else{
+            document.body.style.overflow = ''
+        }
+    }, [isPersonnalDataFormOpen, isLegalFormOpen])
     return(
         <div className='Home Home_dimensions'>
             <Header />
             <main className='main-home'>
+                <div className='home-page-bgd-border'>
+                    <img src={home_page_bgd} className='home-page-bgd' alt='fond page accueil' />
+                </div>
+                <div className='welcome-text-bgd'></div>
                 <div className='main-content'>
                     <div className='welcome-title-container'>
-                        <div className='welcome-title-bgd'></div>
-                        <h1 className='welcome-title'>Bienvenue sur le site de <br />Léo-Paul Berthaut</h1>
+                        <h1>Maître Léo-Paul Berthaut</h1>
+                        <h2>Avocat au barreau de RENNES</h2>
                     </div>
                     <div className='welcome-text-container'>
-                        <div className='welcome-text-bgd'></div>
-                        <p className='welcome-text'>Ceci est un texte avec pour objectif de faire la présentation de Léo-Paul, de son cabinet, ses expertises, etc </p>
+                        <p>Droit des étrangers</p>
+                        <p><RxDividerHorizontal className='divider' /></p>
+                        <p>Droit public</p>
+                        <p><RxDividerHorizontal className='divider' /></p>
+                        <p>Droit pénal</p>
                     </div>
                 </div>
-                <img src={home_page_bgd} className='home-page-bgd' alt='fond page accueil' />
             </main>
             <Footer />
+            <PersonnalDataForm />
+            <LegalForm />
         </div>
     )
 }

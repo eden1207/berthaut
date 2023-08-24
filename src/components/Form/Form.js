@@ -109,7 +109,7 @@ export default function Form() {
                             className="btn-submit btn-submit_dimensions btn-submit_border button" 
                             type="submit" onClick={(e) => {
                                 e.preventDefault();
-                                const ckeckingMail = /^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,3}$/;
+                                const ckeckingMail = /^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]+$/;
 
                                 let error = false;
                                 if(lastName.length<2) {

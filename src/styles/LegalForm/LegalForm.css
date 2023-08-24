@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+.LegalForm-bgd {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: none;
+  left: 0;
+  right: none;
+  z-index: 3;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.LegalForm-bgd_dimensions {
+  width: 100%;
+  height: 1024px !important;
+}
+
+.LegalForm-content {
+  background-color: #f0f0f0;
+  overflow: hidden;
+  position: relative;
+  top: none;
+  bottom: none;
+  left: none;
+  right: none;
+}
+.LegalForm-content_dimensions {
+  width: 95%;
+  height: 350px !important;
+}
+@media all and (min-width: 992px) {
+  .LegalForm-content_dimensions {
+    max-width: 700px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .LegalForm-content_dimensions {
+    max-width: 600px;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .LegalForm-content_dimensions {
+    max-width: none;
+  }
+}
+@media all and (max-width: 440px) {
+  .LegalForm-content_dimensions {
+    max-width: none;
+  }
+}
+.LegalForm-content_border {
+  margin-top: 2% !important;
+  margin-bottom: 2% !important;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  padding-top: 5px !important;
+  padding-bottom: none !important;
+  padding-left: none;
+  padding-right: none;
+}
+.LegalForm-content_animation {
+  animation-name: modalopen;
+  animation-duration: 0.4s;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.LegalForm-content {
+  margin-top: 80px !important;
+  margin-bottom: none !important;
+  margin-left: none;
+  margin-right: none;
+  color: black;
+}
+
+.LegalForm-text {
+  margin-top: 20px !important;
+  margin-bottom: none !important;
+  margin-left: 3%;
+  margin-right: 3%;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding-left: 3%;
+  padding-right: 3%;
+  overflow-y: auto;
+  width: none;
+  height: 235px !important;
+}
+
+.borderTop {
+  border-top: 2px solid black;
+  background-color: black;
+  position: absolute;
+  top: 10px;
+  right: 2%;
+  width: 96%;
+  animation-name: borderTopBottom;
+  animation-duration: 1s;
+}
+
+.borderBottom {
+  border-bottom: 2px solid red;
+  position: absolute;
+  left: 2%;
+  bottom: 75px;
+  width: 96%;
+  animation-name: borderTopBottom;
+  animation-duration: 1s;
+}
+
+@keyframes borderTopBottom {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 96%;
+  }
+}
+.borderLeft {
+  border-left: 2px solid black;
+  position: absolute;
+  top: 10px;
+  left: 2%;
+  height: 270px;
+  animation-name: borderLeftRight;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes borderLeftRight {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 270px;
+  }
+}
+.borderRight {
+  border-right: 2px solid red;
+  position: absolute;
+  bottom: 75px;
+  right: 2%;
+  height: 270px;
+  animation-name: borderLeftRight;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+.section-animation {
+  animation-name: sectionOpacity;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes sectionOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.LegalForm-content h3 {
+  text-align: left;
+}
+@media all and (min-width: 992px) {
+  .LegalForm-content h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .LegalForm-content h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .LegalForm-content h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .LegalForm-content h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+
+.LegalForm-content p {
+  text-align: justify;
+}
+@media all and (min-width: 992px) {
+  .LegalForm-content p {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .LegalForm-content p {
+    font-family: "EB Garamond", serif;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .LegalForm-content p {
+    font-family: "EB Garamond", serif;
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .LegalForm-content p {
+    font-family: "EB Garamond", serif;
+    font-size: 10px;
+    font-weight: normal;
+  }
+}
+
+.LegalForm-content li {
+  text-align: left;
+}
+@media all and (min-width: 992px) {
+  .LegalForm-content li {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .LegalForm-content li {
+    font-family: "EB Garamond", serif;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .LegalForm-content li {
+    font-family: "EB Garamond", serif;
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .LegalForm-content li {
+    font-family: "EB Garamond", serif;
+    font-size: 10px;
+    font-weight: normal;
+  }
+}
+
+.LegalFormConfirmBtn {
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+}
+@media all and (min-width: 992px) {
+  .LegalFormConfirmBtn {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .LegalFormConfirmBtn {
+    font-family: "EB Garamond", serif;
+    font-size: 22px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .LegalFormConfirmBtn {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .LegalFormConfirmBtn {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 992px) {
+  .LegalFormConfirmBtn_dimensions {
+    width: 160px;
+    height: 45px !important;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .LegalFormConfirmBtn_dimensions {
+    width: 140px;
+    height: 42px !important;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .LegalFormConfirmBtn_dimensions {
+    width: 120px;
+    height: 38px !important;
+  }
+}
+@media all and (max-width: 440px) {
+  .LegalFormConfirmBtn_dimensions {
+    width: 100px;
+    height: 35px !important;
+  }
+}
+.LegalFormConfirmBtn_border {
+  margin-top: 20px !important;
+  margin-bottom: none !important;
+  margin-left: none;
+  margin-right: none;
+  border: 0;
+  border-radius: 10px;
+}/*# sourceMappingURL=LegalForm.css.map */

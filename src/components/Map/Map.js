@@ -1,51 +1,49 @@
 /**
  * Component made for map creation on the contact page
  * 
- * You can create a free map thanks to maptiler (https://www.maptiler.com/)
- * You can follow the tutorial https://docs.maptiler.com/react/maplibre-gl-js/how-to-use-maplibre-gl-js/
+ * You can create a free map thanks to Bing Maps (https://www.microsoft.com/en-us/maps/choose-your-bing-maps-api)
+ * You can follow the tutorial https://www.npmjs.com/package/react-bingmaps-plus
  * 
- * You need a API key. To do so, on the home page, go to MyCloud and the API keys to find your key
+ * You need a API key. To do so, on the home page, go to your account to create your key
  * Choose one key for one project
+ * 
+ * Enter the key in API_KEY
  * 
  * In the component, lng and lat are the center of your map coordinates.
  * 
  * You can choose your zoom value with 'zoom'
  * 
- * The function map.current.addControl() is to create a zoom interface on your displayed map
- * 
- * new maplibregl.Marker() is a function to display the position point on your map
+ * pushPins is made to create a cursor
  */
 
-import React, { useRef, useEffect, useState } from 'react';
-import maplibregl from 'maplibre-gl';
-import 'maplibre-gl/dist/maplibre-gl.css';
+import React, { useState } from 'react';
 import '../../styles/Map/Map.css'
+import { ReactBingmaps } from 'react-bingmaps';
 
-export default function Map(){
-    const mapContainer = useRef(null);
-    const map = useRef(null);
-    const [lng] = useState(-1.666);
-    const [lat] = useState(48.1106);
-    const [zoom] = useState(10.5);
-    const [API_KEY] = useState(process.env.REACT_APP_MAP_API_KEY);
 
-    useEffect(() => {
-        if (map.current) return; //stops map from intializing more than once
-          map.current = new maplibregl.Map({
-          container: mapContainer.current,
-          style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${API_KEY}`,
-          center: [lng, lat],
-          zoom: zoom
-        });
-        map.current.addControl(new maplibregl.NavigationControl(), 'top-right');
-        new maplibregl.Marker({color: "#FF0000"})
-          .setLngLat([-1.7183,48.1148])
-          .addTo(map.current);
-    });
-
+export default function ContactMap(){
+      const [lng] = useState(-1.666);
+      const [lat] = useState(48.1106);
+      const [cursor_lng] = useState(-1.7183);
+      const [cursor_lat] = useState(48.1148);
+      const [zoom] = useState(11.4);
+      const [API_KEY] = useState(process.env.REACT_APP_MAP_API_KEY);
       return (
         <div className="Map-wrap">
-          <div ref={mapContainer} className="Map" />
+          <ReactBingmaps 
+            bingmapKey = {API_KEY}
+            center = {[lat, lng]}
+            zoom = {zoom}
+            pushPins = {
+              [
+                {
+                  "location":[cursor_lat, cursor_lng], 
+                  "option":{ color: 'red' },
+                }
+              ]
+            }
+          > 
+          </ReactBingmaps>
         </div>
       );
 }

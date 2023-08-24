@@ -1,25 +1,35 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../styles/Footer/Footer.css'
+import { useDispatch } from "react-redux";
+import { openPersonnalDataForm, openLegalForm } from "../Store/Store.js";
 
 export default function Footer() {
+    const dispatch = useDispatch();
     return(
         <footer className='Footer Footer_dimensions'>
-            <div className='footer-menu-bgd'></div>
             <div className='footer-menu footer-menu_dimensions'>
-                <Link className='menu-link-footer' onClick={(e) => {e.preventDefault()}}>
-                    Numéro de siret
-                </Link>
-                <Link className='menu-link-footer' onClick={(e) => {e.preventDefault()}}>
+                <Link 
+                    className='menu-link-footer' 
+                    onClick={() => {
+                        dispatch(openPersonnalDataForm());
+                    }}
+                >
                     Données personnelles
                 </Link>
-                <Link className='menu-link-footer' onClick={(e) => {e.preventDefault()}}>
-                    ei Léo-Paul Berthaut
-                </Link>
-                <Link className='menu-link-footer' onClick={(e) => {e.preventDefault()}}>
+                <Link 
+                    className='menu-link-footer' 
+                    onClick={() => {
+                        dispatch(openLegalForm());
+                    }}
+                >
                     Mentions légales
                 </Link>
             </div>
         </footer>
     )
 }
+
+/**
+ * <div className='footer-menu-bgd'></div>
+ */

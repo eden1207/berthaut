@@ -5,69 +5,51 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
 }
 @media all and (min-width: 992px) {
   .Map-wrap {
-    width: 455px;
-    height: 455px !important;
-    margin-top: none !important;
-    margin-bottom: 170px !important;
-    margin-left: none;
-    margin-right: none;
+    top: 220px;
+    right: 3%;
+    width: 415px;
+    height: 415px !important;
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .Map-wrap {
-    width: 355px;
-    height: 355px !important;
-    margin-top: none !important;
-    margin-bottom: 220px !important;
-    margin-left: none;
-    margin-right: none;
-  }
-}
-@media all and (min-width: 441px) and (max-width: 767px) {
-  .Map-wrap {
-    width: 400px;
-    height: 400px !important;
-    margin-top: none !important;
-    margin-bottom: 170px !important;
-    margin-left: none;
-    margin-right: none;
-  }
-}
-@media all and (max-width: 440px) {
-  .Map-wrap {
-    width: 280px;
-    height: 280px !important;
-    margin-top: none !important;
-    margin-bottom: 170px !important;
-    margin-left: none;
-    margin-right: none;
-  }
-}
-
-@media all and (min-width: 992px) {
-  .Map {
-    width: 400px;
-    height: 400px !important;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 991px) {
-  .Map {
+    top: 210px;
+    right: 2%;
     width: 300px;
     height: 300px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media all and (min-width: 441px) and (max-width: 767px) {
-  .Map {
-    width: 340px;
-    height: 340px !important;
+  .Map-wrap {
+    top: 850px;
+    width: 350px;
+    height: 350px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media all and (max-width: 440px) {
-  .Map {
-    width: 250px;
-    height: 250px !important;
+  .Map-wrap {
+    top: 800px;
+    width: 280px;
+    height: 280px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }/*# sourceMappingURL=Map.css.map */

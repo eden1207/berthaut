@@ -5,6 +5,8 @@ import { createStore } from "redux";
 const initialState = {
     isFormOpen: false,
     isConfirmWindowOpen: false,
+    isPersonnalDataFormOpen: false,
+    isLegalFormOpen: false,
 };
 
 // actions creators
@@ -16,6 +18,14 @@ export const closeForm = () => ({ type: "closeForm" });
 export const openConfirmWindow = () => ({ type: "openConfirmWindow" });
 
 export const closeConfirmWindow = () => ({ type: "closeConfirmWindow" });
+
+export const openPersonnalDataForm = () => ({ type: "openPersonnalDataForm" });
+
+export const closePersonnalDataForm = () => ({ type: "closePersonnalDataForm" });
+
+export const openLegalForm = () => ({ type: "openLegalForm" });
+
+export const closeLegalForm = () => ({ type: "closeLegalForm" });
 
 
 function reducer(state = initialState, action) {
@@ -44,6 +54,34 @@ function reducer(state = initialState, action) {
     return {
       ...state,
       isConfirmWindowOpen: false,
+    };
+  }
+
+  if (action.type === "openPersonnalDataForm") {
+    return {
+      ...state,
+      isPersonnalDataFormOpen: true,
+    };
+  }
+
+  if (action.type === "closePersonnalDataForm") {
+    return {
+      ...state,
+      isPersonnalDataFormOpen: false,
+    };
+  }
+
+  if (action.type === "openLegalForm") {
+    return {
+      ...state,
+      isLegalFormOpen: true,
+    };
+  }
+
+  if (action.type === "closeLegalForm") {
+    return {
+      ...state,
+      isLegalFormOpen: false,
     };
   }
 
