@@ -52,13 +52,13 @@ export default function Honorarium() {
         <div className='Honorarium Honorarium_dimensions'>
             <Header />
             <main className='main-honorarium'>
-                <h2 className='honorarium-page-title'>
+                <h2 className='honorarium-page-title honorarium-title-appearence'>
                     La rémunération de votre avocat peut se faire par trois moyens, <br/>qui doivent tous être
                     envisagés dépendamment de votre situation.
                 </h2>
-                <div className='honorarium-container'>
+                <div className='honorarium-container honorarium-red-square-appearence'>
                     <img src={justice_symbole} className='justice-symbole' alt='justice' />
-                    <div className='honorarium-page-btn-list'>
+                    <div className='honorarium-page-btn-list honorarium-gray-square-appearence'>
                         <div className={'honorarium-item ' + classHonorariumConventionAnimation} >
                             <button 
                                 type='button'
@@ -68,12 +68,12 @@ export default function Honorarium() {
                                     setIsConventionOpen(!isConventionOpen);
                                 }}
                             >
-                                <h3>La Convention d'honoraires signée entre vous et votre avocat</h3>
+                                <h3 className='honorarium-title-cards-appearence'>La Convention d'honoraires signée entre vous et votre avocat</h3>
                                 {
                                     isConventionOpen ? (
                                         <SlArrowUp className={isConventionBtnActive ? 'arrowOpenWindow' : ''} />
                                     ) : (
-                                        <SlArrowDown className={isConventionBtnActive ? 'arrowCloseWindow' : ''} />
+                                        <SlArrowDown className={isConventionBtnActive ? 'arrowCloseWindow' : 'honorarium-title-cards-appearence'} />
                                     )
                                 }
                             </button>
@@ -124,12 +124,12 @@ export default function Honorarium() {
                                     setIsHelpOpen(!isHelpOpen);
                                 }}
                             >
-                                <h3>L'aide juridictionnelle</h3>
+                                <h3 className='honorarium-title-cards-appearence'>L'aide juridictionnelle</h3>
                                 {
                                     isHelpOpen ? (
                                         <SlArrowUp className={isHelpBtnActive ? 'arrowOpenWindow' : ''} />
                                     ) : (
-                                        <SlArrowDown className={isHelpBtnActive ? 'arrowCloseWindow' : ''} />
+                                        <SlArrowDown className={isHelpBtnActive ? 'arrowCloseWindow' : 'honorarium-title-cards-appearence'} />
                                     )
                                 }
                             </button>
@@ -175,12 +175,12 @@ export default function Honorarium() {
                                     setIsProtectionOpen(!isProtectionOpen);
                                 }}
                             >
-                                <h3>Assurance Protection Juridique</h3>
+                                <h3 className='honorarium-title-cards-appearence'>Assurance Protection Juridique</h3>
                                 {
                                     isProtectionOpen ? (
                                         <SlArrowUp className={isProtectionBtnActive ? 'arrowOpenWindow' : ''} />
                                     ) : (
-                                        <SlArrowDown className={isProtectionBtnActive ? 'arrowCloseWindow' : ''} />
+                                        <SlArrowDown className={isProtectionBtnActive ? 'arrowCloseWindow' : 'honorarium-title-cards-appearence'} />
                                     )
                                 }
                             </button>

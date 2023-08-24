@@ -118,6 +118,9 @@
   }
 }
 
+.confirmWindow-close-btn img {
+  transition: all 200ms;
+}
 @media all and (min-width: 992px) {
   .confirmWindow-close-btn img {
     width: 32px;
@@ -141,6 +144,9 @@
     width: 20px;
     height: auto !important;
   }
+}
+.confirmWindow-close-btn img:hover {
+  transform: scale(1.15);
 }
 
 .confirmWindow-content h3 {
@@ -183,6 +189,7 @@
   background-color: black;
   color: #fff;
   cursor: pointer;
+  transition: all 200ms;
 }
 @media all and (min-width: 992px) {
   .ConfirmBtn {
@@ -243,4 +250,7 @@
   margin-right: none;
   border: 0;
   border-radius: 10px;
+}
+.ConfirmBtn:hover {
+  transform: scale(1.15);
 }/*# sourceMappingURL=ConfirmWindow.css.map */

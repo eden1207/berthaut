@@ -1,6 +1,7 @@
 @import "../Mixins/Mixin";
 
 .Introduction{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -81,4 +82,75 @@
         @include dimensions(75%, auto);
         @include padding-package(25px, 25px, 8%, 8%);
     }
+}
+
+/* Animation */
+
+@keyframes introRedSquareAppearence{
+    0%{
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateX(-250px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.intro-red-square-appearence {
+    animation: introRedSquareAppearence 900ms linear;
+    animation-delay: 0ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes introBlackSquareAppearence{
+    0%{
+        transform: translateX(500px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateX(250px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.intro-black-square-appearence {
+    animation: introBlackSquareAppearence 900ms linear;
+    animation-delay: 0ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes introTitleAppearence{
+    0%{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.intro-title-appearence {
+    animation: introTitleAppearence 500ms linear;
+    animation-delay: 700ms;
+    animation-fill-mode: backwards;
 }

@@ -85,6 +85,10 @@
     @media all and (max-width: 440px) {
         @include dimensions(20px, auto);
     }
+    transition: all 200ms;
+    &:hover {
+        transform: scale(1.15);
+    }
 }
 
 .confirmWindow-content h3 {
@@ -138,5 +142,9 @@
       @include margin-package(230px, none, none, none);
       border: 0;
       border-radius: 10px;
+    }
+    transition: all 200ms;
+    &:hover {
+        transform: scale(1.15);
     }
 }

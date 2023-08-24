@@ -85,6 +85,10 @@
     @media all and (max-width: 440px) {
         @include position-package(absolute, 10px, none, none, 10px);
     }
+    transition: all 200ms;
+    &:hover {
+        transform: scale(1.15);
+    }
 }
 
 .form-close-btn img {
@@ -254,6 +258,10 @@ input {
       border: 0;
       border-radius: 10px;
     }
+    transition: all 200ms;
+    &:hover {
+        transform: scale(1.15);
+    }
   }
 
   .error-message{
@@ -324,5 +332,9 @@ input {
         @include syntaxe-garamond(14px, normal);
         @include dimensions(25px, 25px);
         border-radius: 4px;
+    }
+    transition: all 200ms;
+    &:hover {
+        transform: scale(1.15);
     }
   }

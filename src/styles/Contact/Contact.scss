@@ -1,6 +1,7 @@
 @import "../Mixins/Mixin";
 
 .Contact{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -156,4 +157,79 @@
         @include margin-package(40px, none, none, none);
         @include syntaxe-garamond(14px, normal);
     }
+    transition: all 200ms;
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+
+/* Animation */
+
+@keyframes contactRedSquareAppearence{
+    0%{
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateX(-250px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.contact-red-square-appearence {
+    animation: contactRedSquareAppearence 1000ms linear;
+    animation-delay: 300ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes contactGraySquareAppearence{
+    0%{
+        transform: translateX(500px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateX(250px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.contact-gray-square-appearence {
+    animation: contactGraySquareAppearence 1000ms linear;
+    animation-delay: 300ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes contactTextAppearence{
+    0%{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.contact-text-appearence {
+    animation: contactTextAppearence 500ms linear;
+    animation-delay: 1300ms;
+    animation-fill-mode: backwards;
 }

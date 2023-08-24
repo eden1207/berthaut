@@ -7,8 +7,8 @@ import { openPersonnalDataForm, openLegalForm } from "../Store/Store.js";
 export default function Footer() {
     const dispatch = useDispatch();
     return(
-        <footer className='Footer Footer_dimensions'>
-            <div className='footer-menu footer-menu_dimensions'>
+        <footer className='Footer Footer_dimensions footer-appearence'>
+            <div className='footer-menu footer-menu_dimensions footer-link-appearence'>
                 <Link 
                     className='menu-link-footer' 
                     onClick={() => {

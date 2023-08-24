@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
 .Honorarium {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -395,4 +396,78 @@
     width: 80%;
     height: 50px;
   }
+}
+/* Animation */
+@keyframes honorariumTitleAppearence {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.honorarium-title-appearence {
+  animation: honorariumTitleAppearence 1000ms linear;
+  animation-delay: 0ms;
+  animation-fill-mode: backwards;
+}
+
+@keyframes honorariumRedSquareAppearence {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.honorarium-red-square-appearence {
+  animation: honorariumRedSquareAppearence 1000ms linear;
+  animation-delay: 200ms;
+  animation-fill-mode: backwards;
+}
+
+@keyframes honorariumGraySquareAppearence {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(250px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.honorarium-gray-square-appearence {
+  animation: honorariumGraySquareAppearence 1000ms linear;
+  animation-delay: 300ms;
+  animation-fill-mode: backwards;
+}
+
+@keyframes honorariumTitleCardsAppearence {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.honorarium-title-cards-appearence {
+  animation: honorariumTitleCardsAppearence 500ms linear;
+  animation-delay: 1300ms;
+  animation-fill-mode: backwards;
 }/*# sourceMappingURL=Honorarium.css.map */

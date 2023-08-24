@@ -275,6 +275,7 @@
   background-color: black;
   color: #fff;
   cursor: pointer;
+  transition: all 200ms;
 }
 @media all and (min-width: 992px) {
   .PersonnalDataFormConfirmBtn {
@@ -335,4 +336,7 @@
   margin-right: none;
   border: 0;
   border-radius: 10px;
+}
+.PersonnalDataFormConfirmBtn:hover {
+  transform: scale(1.15);
 }/*# sourceMappingURL=PersonnalDataForm.css.map */

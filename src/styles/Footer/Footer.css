@@ -62,6 +62,7 @@
   color: white;
   text-decoration: none;
   cursor: pointer;
+  transition: all 200ms;
 }
 @media all and (min-width: 992px) {
   .menu-link-footer {
@@ -90,38 +91,48 @@
     font-size: 14px;
     font-weight: normal;
   }
+}
+.menu-link-footer:hover {
+  transform: scale(1.15);
 }
 
-.menu-link-footer:hover {
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-}
-@media all and (min-width: 992px) {
-  .menu-link-footer:hover {
-    font-family: "EB Garamond", serif;
-    font-size: 20px;
-    font-weight: normal;
+/* Animation */
+@keyframes footerAppearence {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(70px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
-@media all and (min-width: 768px) and (max-width: 991px) {
-  .menu-link-footer:hover {
-    font-family: "EB Garamond", serif;
-    font-size: 18px;
-    font-weight: normal;
+.footer-appearence {
+  animation: footerAppearence 800ms linear;
+  animation-delay: 200ms;
+  animation-fill-mode: backwards;
+}
+
+@keyframes footerLinkAppearence {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
-@media all and (min-width: 441px) and (max-width: 767px) {
-  .menu-link-footer:hover {
-    font-family: "EB Garamond", serif;
-    font-size: 16px;
-    font-weight: normal;
-  }
-}
-@media all and (max-width: 440px) {
-  .menu-link-footer:hover {
-    font-family: "EB Garamond", serif;
-    font-size: 14px;
-    font-weight: normal;
-  }
+.footer-link-appearence {
+  animation: footerLinkAppearence 500ms linear;
+  animation-delay: 900ms;
+  animation-fill-mode: backwards;
 }/*# sourceMappingURL=Footer.css.map */

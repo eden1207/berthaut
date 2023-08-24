@@ -50,22 +50,56 @@
     color: white;
     text-decoration: none;
     cursor: pointer;
+    transition: all 200ms;
+    &:hover {
+        transform: scale(1.15);
+    }
 }
 
-.menu-link-footer:hover{
-    @media all and (min-width: 992px) {
-        @include syntaxe-garamond(20px, normal);
+/* Animation */
+
+@keyframes footerAppearence{
+    0%{
+        transform: translateY(150px);
+        opacity: 0;
     }
-    @media all and (min-width: 768px) and (max-width: 991px) {
-        @include syntaxe-garamond(18px, normal);
+
+    50%{
+        transform: translateY(70px);
+        opacity: 0;
     }
-    @media all and (min-width: 441px) and (max-width: 767px) {
-        @include syntaxe-garamond(16px, normal);
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
     }
-    @media all and (max-width: 440px) {
-        @include syntaxe-garamond(14px, normal);
+}
+
+.footer-appearence {
+    animation: footerAppearence 800ms linear;
+    animation-delay: 200ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes footerLinkAppearence{
+    0%{
+        transform: translateY(40px);
+        opacity: 0;
     }
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
+
+    50%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.footer-link-appearence {
+    animation: footerLinkAppearence 500ms linear;
+    animation-delay: 900ms;
+    animation-fill-mode: backwards;
 }

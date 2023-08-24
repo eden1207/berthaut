@@ -1,10 +1,12 @@
 @import "../Mixins/Mixin";
 
 .Home{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    overflow: hidden;
 }
 
 .main-home{
@@ -15,7 +17,6 @@
     align-items: center;
     min-height: 1000px;
     @include dimensions(100%, none);
-    overflow: hidden;
 }
 
 .welcome-text-bgd {
@@ -198,4 +199,115 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Animation */
+
+@keyframes homePhotoAppearence{
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.home-photo-appearence {
+    animation: homePhotoAppearence 1000ms linear;
+    animation-delay: 0ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes blackSquareAppearence{
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.black-square-appearence {
+    animation: blackSquareAppearence 1000ms linear;
+    animation-delay: 200ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes redSquareAppearence{
+    0%{
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateX(-250px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.red-square-appearence {
+    animation: redSquareAppearence 1000ms linear;
+    animation-delay: 300ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes graySquareAppearence{
+    0%{
+        transform: translateX(500px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateX(250px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.gray-square-appearence {
+    animation: graySquareAppearence 1000ms linear;
+    animation-delay: 300ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes titleAppearence{
+    0%{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.title-appearence {
+    animation: titleAppearence 500ms linear;
+    animation-delay: 1300ms;
+    animation-fill-mode: backwards;
 }

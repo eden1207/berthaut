@@ -33,20 +33,20 @@ export default function Contact() {
             <Header />
             <main>
                 <div className='contact-page-container'>
-                    <ul className='contact-data'>
-                        <li className='contact-data-element'>
+                    <ul className='contact-data contact-red-square-appearence'>
+                        <li className='contact-data-element contact-text-appearence'>
                             Maître Léo-Paul Berthaut
                         </li>
-                        <li className='contact-data-element'>
+                        <li className='contact-data-element contact-text-appearence'>
                             8 Rue du Bourg Nouveau <br/> 1er Etage <br />35000 Rennes
                         </li>
-                        <li className='contact-data-element'>
+                        <li className='contact-data-element contact-text-appearence'>
                             <GiSmartphone /> 02.99.78.88.00 / 07.89.07.10.84
                         </li>
-                        <li className='contact-data-element'>
+                        <li className='contact-data-element contact-text-appearence'>
                             <MdOutlineEmail /> lp.berthaut.avocat@gmail.com
                         </li>
-                        <li className='contact-data-element-tab'>
+                        <li className='contact-data-element-tab contact-text-appearence'>
                             <p>
                                 Horaire d'ouverture du secrétariat (aucun accueil sans rendez-vous hors de ces
                                 horaires) :
@@ -125,7 +125,7 @@ export default function Contact() {
                         </li>
                         <li>
                             <button 
-                                className='contact-btn' 
+                                className='contact-btn contact-text-appearence' 
                                 type="button"
                                 onClick={() => {
                                     dispatch(openForm())
@@ -135,9 +135,9 @@ export default function Contact() {
                             </button>
                         </li>
                     </ul>
-                    <ContactMap />
+                    <ContactMap className='contact-text-appearence'/>
                 </div>
-                <div className='contact-bgd'></div>
+                <div className='contact-bgd contact-gray-square-appearence'></div>
             </main>
             <Footer />
             <Form />

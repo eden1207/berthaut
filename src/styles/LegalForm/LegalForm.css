@@ -271,6 +271,7 @@
   background-color: black;
   color: #fff;
   cursor: pointer;
+  transition: all 200ms;
 }
 @media all and (min-width: 992px) {
   .LegalFormConfirmBtn {
@@ -331,4 +332,7 @@
   margin-right: none;
   border: 0;
   border-radius: 10px;
+}
+.LegalFormConfirmBtn:hover {
+  transform: scale(1.15);
 }/*# sourceMappingURL=LegalForm.css.map */

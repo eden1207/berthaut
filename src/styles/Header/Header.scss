@@ -82,27 +82,108 @@
     @media all and (max-width: 440px) {
         @include syntaxe-garamond(14px, normal);
     }
-    /*color: white;*/
     color: black;
     text-decoration: none;
     cursor: pointer;
+    transition: all 200ms;
+    &:hover {
+        transform: scale(1.15);
+    }
+    &:hover >.link-underline {
+        border-bottom: 2px solid black;
+        transform: scaleX(1);
+    }
 }
 
-.menu-link:hover{
-    @media all and (min-width: 992px) {
-        @include syntaxe-garamond(24px, normal);
+.link-underline {
+    border-bottom: 2px solid black;
+    transform-origin: 50% 50%;
+    transform: scaleX(0);
+    transition: transform 500ms; 
+}
+
+.active-link-underline {
+    display: none;
+}
+
+.active-menu-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include dimensions(auto, 30px);
+    color: rgb(236 28 36);
+    border-bottom: 2px solid rgb(236 28 36);
+    transition: all 200ms;
+    &:hover {
+        transform: scale(1.15);
+        color: rgb(236 28 36);
     }
-    @media all and (min-width: 768px) and (max-width: 991px) {
-        @include syntaxe-garamond(20px, normal);
+}
+
+/* Animation */
+
+@keyframes headerAppearence{
+    0%{
+        transform: translateY(-150px);
+        opacity: 0;
     }
-    @media all and (min-width: 441px) and (max-width: 767px) {
-        @include syntaxe-garamond(16px, normal);
+
+    50%{
+        transform: translateY(-70px);
+        opacity: 0;
     }
-    @media all and (max-width: 440px) {
-        @include syntaxe-garamond(14px, normal);
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
     }
-    /*color: white;*/
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+}
+
+.header-appearence {
+    animation: headerAppearence 800ms linear;
+    animation-delay: 200ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes headerLinkAppearence{
+    0%{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.header-link-appearence {
+    animation: headerLinkAppearence 500ms linear;
+    animation-delay: 900ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes headerLogoAppearence{
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.header-logo-appearence {
+    animation: headerLogoAppearence 1000ms linear;
+    animation-delay: 900ms;
+    animation-fill-mode: backwards;
 }

@@ -25,20 +25,20 @@ export default function Home() {
             <Header />
             <main className='main-home'>
                 <div className='home-page-bgd-border'>
-                    <img src={home_page_bgd} className='home-page-bgd' alt='fond page accueil' />
+                    <img src={home_page_bgd} className='home-page-bgd home-photo-appearence' alt='fond page accueil' />
                 </div>
-                <div className='welcome-text-bgd'></div>
+                <div className='welcome-text-bgd black-square-appearence'></div>
                 <div className='main-content'>
-                    <div className='welcome-title-container'>
-                        <h1>Maître Léo-Paul Berthaut</h1>
-                        <h2>Avocat au barreau de RENNES</h2>
+                    <div className='welcome-title-container red-square-appearence'>
+                        <h1 className='title-appearence'>Maître Léo-Paul Berthaut</h1>
+                        <h2 className='title-appearence'>Avocat au barreau de RENNES</h2>
                     </div>
-                    <div className='welcome-text-container'>
-                        <p>Droit des étrangers</p>
-                        <p><RxDividerHorizontal className='divider' /></p>
-                        <p>Droit public</p>
-                        <p><RxDividerHorizontal className='divider' /></p>
-                        <p>Droit pénal</p>
+                    <div className='welcome-text-container gray-square-appearence'>
+                        <p className='title-appearence'>Droit des étrangers</p>
+                        <p className='title-appearence'><RxDividerHorizontal className='divider' /></p>
+                        <p className='title-appearence'>Droit public</p>
+                        <p className='title-appearence'><RxDividerHorizontal className='divider' /></p>
+                        <p className='title-appearence'>Droit pénal</p>
                     </div>
                 </div>
             </main>
