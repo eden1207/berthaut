@@ -1,4 +1,175 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
 .ErrorPage {
-  border: 1px blue solid;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto !important;
+  overflow: hidden;
+}
+
+.errorpage-header {
+  z-index: 4;
+}
+
+.errorpage-footer {
+  z-index: 4;
+}
+
+.main-errorpage {
+  z-index: 1;
+  width: 100%;
+  height: auto !important;
+  min-height: 1080px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-cabinet-berthaut-errorpage {
+  z-index: 1;
+  position: absolute;
+  opacity: 0.15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media all and (min-width: 992px) {
+  .logo-cabinet-berthaut-errorpage {
+    top: 200px;
+    width: none;
+    height: 800px !important;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .logo-cabinet-berthaut-errorpage {
+    top: 250px;
+    width: none;
+    height: 700px !important;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .logo-cabinet-berthaut-errorpage {
+    top: 300px;
+    width: none;
+    height: 600px !important;
+  }
+}
+@media all and (max-width: 440px) {
+  .logo-cabinet-berthaut-errorpage {
+    top: 400px;
+    width: none;
+    height: 400px !important;
+  }
+}
+
+.error-number {
+  margin-top: none !important;
+  margin-bottom: -20px !important;
+  margin-left: none;
+  margin-right: none;
+  color: rgb(236, 28, 36);
+}
+@media all and (min-width: 992px) {
+  .error-number {
+    font-family: "EB Garamond", serif;
+    font-size: 180px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .error-number {
+    font-family: "EB Garamond", serif;
+    font-size: 150px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .error-number {
+    font-family: "EB Garamond", serif;
+    font-size: 120px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .error-number {
+    font-family: "EB Garamond", serif;
+    font-size: 90px;
+    font-weight: normal;
+  }
+}
+
+.ErrorMessage404 {
+  margin-top: none !important;
+  margin-bottom: -5px !important;
+  margin-left: none;
+  margin-right: none;
+  color: black;
+}
+@media all and (min-width: 992px) {
+  .ErrorMessage404 {
+    font-family: "EB Garamond", serif;
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .ErrorMessage404 {
+    font-family: "EB Garamond", serif;
+    font-size: 35px;
+    font-weight: bold;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .ErrorMessage404 {
+    font-family: "EB Garamond", serif;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+@media all and (max-width: 440px) {
+  .ErrorMessage404 {
+    font-family: "EB Garamond", serif;
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+
+.ErrorMessageLink {
+  color: black;
+  text-decoration: none;
+}
+@media all and (min-width: 992px) {
+  .ErrorMessageLink {
+    font-family: "EB Garamond", serif;
+    font-size: 30px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .ErrorMessageLink {
+    font-family: "EB Garamond", serif;
+    font-size: 25px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 441px) and (max-width: 767px) {
+  .ErrorMessageLink {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 440px) {
+  .ErrorMessageLink {
+    font-family: "EB Garamond", serif;
+    font-size: 15px;
+    font-weight: normal;
+  }
+}
+.ErrorMessageLink:hover {
+  color: rgb(236, 28, 36);
 }/*# sourceMappingURL=ErrorPage.css.map */

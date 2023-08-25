@@ -1,5 +1,108 @@
 @import "../../../Mixins/Mixin";
 
 .ErrorPage{
-    border: 1px blue solid;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @include dimensions(100%, auto);
+    overflow: hidden;
+}
+
+.errorpage-header{
+    z-index: 4;
+}
+
+.errorpage-footer{
+    z-index: 4;
+}
+
+.main-errorpage{
+    z-index: 1;
+    @include dimensions(100%, auto);
+    min-height: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-cabinet-berthaut-errorpage{
+    z-index: 1;
+    position: absolute;
+    opacity: 0.15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media all and (min-width: 992px) {
+        top: 200px;
+        @include dimensions(none, 800px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        top: 250px;
+        @include dimensions(none, 700px);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        top: 300px;
+        @include dimensions(none, 600px);
+    }
+    @media all and (max-width: 440px) {
+        top: 400px;
+        @include dimensions(none, 400px);
+    }
+}
+
+.error-number {
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(180px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(150px, normal);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include syntaxe-garamond(120px, normal);
+    }
+    @media all and (max-width: 440px) {
+        @include syntaxe-garamond(90px, normal);
+    }
+    @include margin-package(none, -20px, none, none);
+    color: rgb(236 28 36);
+}
+
+.ErrorMessage404 {
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(40px, bold);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(35px, bold);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include syntaxe-garamond(30px, bold);
+    }
+    @media all and (max-width: 440px) {
+        @include syntaxe-garamond(25px, bold);
+    }
+    @include margin-package(none, -5px, none, none);
+    color: black;
+}
+
+.ErrorMessageLink {
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(30px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(25px, normal);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (max-width: 440px) {
+        @include syntaxe-garamond(15px, normal);
+    }
+    color: black;
+    text-decoration: none;
+    &:hover {
+        color: rgb(236 28 36);
+    }
 }
