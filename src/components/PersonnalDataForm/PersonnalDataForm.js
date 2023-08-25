@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/PersonnalDataForm/PersonnalDataForm.css'
+import './styles/PersonnalDataForm.css'
 
 import { useDispatch, useSelector } from "react-redux";
 import { closePersonnalDataForm } from "../Store/Store.js";
@@ -39,8 +39,8 @@ export default function PersonnalDataForm() {
                             réglementation en vigueur.
                         </p>
                         <p>
-                            Pour plus d'informations : veuillez consulter le site suivant 
-                            https://www.cnil.fr/fr/
+                            Pour plus d'informations : veuillez consulter  
+                            <a target='_blank' rel="noreferrer" href="https://www.cnil.fr/fr/"className='cnil-link'> ce lien</a>. 
                         </p>
                     </section>
                     <section className='section-animation'>

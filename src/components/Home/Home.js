@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import '../../styles/Home/Home.css'
+import './styles/Home.css'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import PersonnalDataForm from '../PersonnalDataForm/PersonnalDataForm'

@@ -1,0 +1,235 @@
+@import "../../../Mixins/Mixin";
+
+.Contact{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @include dimensions(100%, auto);
+    overflow: hidden;
+}
+
+.contact-bgd{
+    z-index: 1;
+    position: absolute;
+    background-color: rgb(0 0 0 / 0.65);
+    @media all and (min-width: 992px) {
+        top: 200px;
+        right: 2%;
+        @include dimensions(70%, 650px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        top: 200px;
+        right: 1%;
+        @include dimensions(80%, 600px);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        top: 400px;
+        right: 3%;
+        @include dimensions(95%, 880px);
+    }
+    @media all and (max-width: 440px) {
+        top: 400px;
+        right: 1%;
+        @include dimensions(100%, 750px);
+    }
+}
+
+.contact-page-container{
+    @include dimensions(100%, auto);
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    @media all and (min-width: 992px) {
+        min-height: 1024px;
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        min-height: 1024px;
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        min-height: 1300px;
+    }
+    @media all and (max-width: 440px) {
+        min-height: 1180px;
+    }
+}
+
+.contact-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    background-color: rgb(236 28 36);
+    color: white;
+    z-index: 3;
+    list-style: none;
+    @media all and (min-width: 992px) {
+        top: 250px;
+        left: 2%;
+        @include padding-package(60px, 70px, none, 3%);
+        max-width: 700px;
+        @include dimensions(40%, 550px);
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        top: 290px;
+        left: 1%;
+        @include padding-package(40px, 50px, none, 5%);
+        @include dimensions(45%, 550px);
+        @include syntaxe-garamond(18px, normal);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        top: 150px;
+        @include padding-package(5px, 10px, none, 6%);
+        @include dimensions(70%, 650px);
+        @include syntaxe-garamond(16px, normal);
+    }
+    @media all and (max-width: 440px) {
+        top: 150px;
+        @include padding-package(25px, 35px, none, 15%);
+        @include dimensions(70%, 550px);
+        @include syntaxe-garamond(14px, normal);
+    }
+}
+
+.contact-data-element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-data-element-tab{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.table-border{
+    background-color: rgb(255 255 255 / 0.55);
+    color: black;
+    border-radius: 4px;
+    @include padding-package(15px, 15px, 15px, 15px);
+    @media all and (min-width: 992px) {
+        @include dimensions(90%, 280px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(95%, 280px);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include dimensions(90%, 280px);
+    }
+    @media all and (max-width: 440px) {
+        @include dimensions(100%, 260px);
+        min-width: 250px;
+        @include syntaxe-garamond(12px, normal);
+    }
+}
+
+.contact-btn{
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    @media all and (min-width: 992px) {
+        @include dimensions(150px, 50px);
+        @include margin-package(20px, none, none, none);
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(135px, 45px);
+        @include margin-package(40px, none, none, none);
+        @include syntaxe-garamond(18px, normal);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include dimensions(130px, 40px);
+        @include margin-package(10px, none, none, none);
+        @include syntaxe-garamond(16px, normal);
+    }
+    @media all and (max-width: 440px) {
+        @include dimensions(130px, 40px);
+        @include margin-package(40px, none, none, none);
+        @include syntaxe-garamond(14px, normal);
+    }
+    transition: all 200ms;
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+
+/* Animation */
+
+@keyframes contactRedSquareAppearence{
+    0%{
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateX(-250px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.contact-red-square-appearence {
+    animation: contactRedSquareAppearence 1000ms linear;
+    animation-delay: 300ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes contactGraySquareAppearence{
+    0%{
+        transform: translateX(500px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateX(250px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.contact-gray-square-appearence {
+    animation: contactGraySquareAppearence 1000ms linear;
+    animation-delay: 300ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes contactTextAppearence{
+    0%{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.contact-text-appearence {
+    animation: contactTextAppearence 500ms linear;
+    animation-delay: 1300ms;
+    animation-fill-mode: backwards;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../../styles/Form/Form.css'
+import './styles/Form.css'
 import close_btn from '../../assets/close.svg'
 import { FaFileImport } from "react-icons/fa";
 

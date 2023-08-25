@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/ErrorPage/ErrorPage.css'
+import './styles/ErrorPage.css'
 
 export default function ErrorPage() {
     return(

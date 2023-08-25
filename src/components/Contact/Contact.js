@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { openForm } from "../Store/Store.js";
-import '../../styles/Contact/Contact.css'
+import './styles/Contact.css'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import ContactMap from '../Map/Map'

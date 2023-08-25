@@ -1,0 +1,189 @@
+@import "../../../Mixins/Mixin";
+
+.Header{
+    z-index: 2;
+    @include dimensions(100%, 150px);
+    position: absolute;
+}
+
+.header-bgd{
+    @include dimensions(100%, 150px);
+    /*background-color: rgb(0 0 0 / 0.35);*/
+    background-color: rgb(0 0 0 / 0.10);
+    box-shadow: 1px 1px 10px rgb(0 0 0 / 0.60);
+}
+
+.header-content{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    @media all and (min-width: 992px) {
+        justify-content: space-around;
+        @include dimensions(100%, 150px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        justify-content: space-around;
+        @include dimensions(100%, 150px);
+    }
+    @media all and (max-width: 767px) {
+        flex-direction: column;
+        justify-content: space-around;
+        @include padding-package(10px, 10px, none, none);
+        @include dimensions(100%, 130px);
+    }
+    @include margin-package(-150px, none, none, none);
+}
+
+.logo-leo-paul{
+    @media all and (min-width: 992px) {
+        @include dimensions(none, 130px);
+        @include margin-package(none, none, none, 25%);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(none, 110px);
+        @include margin-package(none, none, none, 25%);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(none, 90px);
+        @include margin-package(none, none, none, none);
+    }
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_dimensions{ 
+        @media all and (min-width: 992px) {
+            @include dimensions(40%, none);
+        }
+        @media all and (min-width: 768px) and (max-width: 991px) {
+            @include dimensions(50%, none);
+        }
+        @media all and (min-width: 441px) and (max-width: 767px) {
+            @include dimensions(75%, none);
+        }
+        @media all and (max-width: 440px) {
+            @include dimensions(90%, none);
+        }
+    }
+}
+
+.menu-link{
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(24px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (min-width: 441px) and (max-width: 767px) {
+        @include syntaxe-garamond(16px, normal);
+    }
+    @media all and (max-width: 440px) {
+        @include syntaxe-garamond(14px, normal);
+    }
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 200ms;
+    &:hover {
+        transform: scale(1.15);
+    }
+    &:hover >.link-underline {
+        border-bottom: 2px solid black;
+        transform: scaleX(1);
+    }
+}
+
+.link-underline {
+    border-bottom: 2px solid black;
+    transform-origin: 50% 50%;
+    transform: scaleX(0);
+    transition: transform 500ms; 
+}
+
+.active-link-underline {
+    display: none;
+}
+
+.active-menu-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include dimensions(auto, 30px);
+    color: rgb(236 28 36);
+    border-bottom: 2px solid rgb(236 28 36);
+    transition: all 200ms;
+    &:hover {
+        transform: scale(1.15);
+        color: rgb(236 28 36);
+    }
+}
+
+/* Animation */
+
+@keyframes headerAppearence{
+    0%{
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateY(-70px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.header-appearence {
+    animation: headerAppearence 800ms linear;
+    animation-delay: 200ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes headerLinkAppearence{
+    0%{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.header-link-appearence {
+    animation: headerLinkAppearence 500ms linear;
+    animation-delay: 900ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes headerLogoAppearence{
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.header-logo-appearence {
+    animation: headerLogoAppearence 1000ms linear;
+    animation-delay: 900ms;
+    animation-fill-mode: backwards;
+}

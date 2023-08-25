@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import { useSelector } from "react-redux";
-import '../../styles/Introduction/Introduction.css'
+import './styles/Introduction.css'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import PersonnalDataForm from '../PersonnalDataForm/PersonnalDataForm'

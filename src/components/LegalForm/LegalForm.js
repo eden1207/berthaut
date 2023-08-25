@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/LegalForm/LegalForm.css'
+import './styles/LegalForm.css'
 
 import { useDispatch, useSelector } from "react-redux";
 import { closeLegalForm } from "../Store/Store.js";

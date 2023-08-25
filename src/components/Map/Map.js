@@ -17,7 +17,7 @@
  */
 
 import React, { useState } from 'react';
-import '../../styles/Map/Map.css'
+import './styles/Map.css'
 import { ReactBingmaps } from 'react-bingmaps';
 
 

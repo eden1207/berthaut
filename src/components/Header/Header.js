@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import '../../styles/Header/Header.css'
+import './styles/Header.css'
 import logo_berthaut from '../../assets/logo_berthaut.png'
 
 export default function Header() {

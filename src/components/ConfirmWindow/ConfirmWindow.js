@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/ConfirmWindow/ConfirmWindow.css'
+import './styles/ConfirmWindow.css'
 import close_btn from '../../assets/close.svg'
 
 import { useDispatch, useSelector } from "react-redux";

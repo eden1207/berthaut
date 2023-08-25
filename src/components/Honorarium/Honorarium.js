@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from "react-redux";
-import '../../styles/Honorarium/Honorarium.css'
+import './styles/Honorarium.css'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 //import honorarium_page_bgd from '../../assets/pexels-andrew-neel-2312369.jpg'
@@ -147,7 +147,7 @@ export default function Honorarium() {
                                             (revenus mensuels, patrimoine mobilier et immobilier).
                                         </p>
                                         <p>
-                                            Une simulation est disponible sur le site https://www.service-public.fr/
+                                            Une simulation est disponible sur <a target='_blank' rel="noreferrer" href="https://www.service-public.fr/"className='public-service-link'> ce lien</a>.
                                         </p>
                                         <p>
                                             Outre la modestie des ressources du demandeur, il ne faut pas que celui-ci 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../../styles/Footer/Footer.css'
+import './styles/Footer.css'
 import { useDispatch } from "react-redux";
 import { openPersonnalDataForm, openLegalForm } from "../Store/Store.js";
 
