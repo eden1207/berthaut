@@ -29,7 +29,7 @@ export default function ContactMap(){
       const [zoom] = useState(11.4);
       const [API_KEY] = useState(process.env.REACT_APP_MAP_API_KEY);
       return (
-        <div className="Map-wrap">
+        <div className="Map-wrap" >
           <ReactBingmaps 
             bingmapKey = {API_KEY}
             center = {[lat, lng]}

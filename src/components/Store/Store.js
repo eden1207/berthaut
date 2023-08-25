@@ -7,6 +7,16 @@ const initialState = {
     isConfirmWindowOpen: false,
     isPersonnalDataFormOpen: false,
     isLegalFormOpen: false,
+    tabIndexPage: 0,
+    tabIndexPersonnalDataForm: -1,
+    tabIndexLegalForm: -1,
+    tabIndexForm: -1,
+    tabIndexConfirmWindow: -1,
+    ariaHiddenPage: false,
+    ariaHiddenPersonnalDataForm: true,
+    ariaHiddenLegalForm: true,
+    ariaHiddenForm: true,
+    ariaHiddenConfirmWindow: true,
 };
 
 // actions creators
@@ -33,6 +43,10 @@ function reducer(state = initialState, action) {
     return {
       ...state,
       isFormOpen: true,
+      tabIndexPage: -1,
+      tabIndexForm: 0,
+      ariaHiddenPage: true,
+      ariaHiddenForm: false,
     };
   }
 
@@ -40,6 +54,10 @@ function reducer(state = initialState, action) {
     return {
       ...state,
       isFormOpen: false,
+      tabIndexPage: 0,
+      tabIndexForm: -1,
+      ariaHiddenPage: false,
+      ariaHiddenForm: true,
     };
   }
 
@@ -47,6 +65,10 @@ function reducer(state = initialState, action) {
     return {
       ...state,
       isConfirmWindowOpen: true,
+      tabIndexPage: -1,
+      tabIndexConfirmWindow: 0,
+      ariaHiddenPage: true,
+      ariaHiddenConfirmWindow: false,
     };
   }
 
@@ -54,6 +76,10 @@ function reducer(state = initialState, action) {
     return {
       ...state,
       isConfirmWindowOpen: false,
+      tabIndexPage: 0,
+      tabIndexConfirmWindow: -1,
+      ariaHiddenPage: false,
+      ariaHiddenConfirmWindow: true,
     };
   }
 
@@ -61,6 +87,10 @@ function reducer(state = initialState, action) {
     return {
       ...state,
       isPersonnalDataFormOpen: true,
+      tabIndexPage: -1,
+      tabIndexPersonnalDataForm: 0,
+      ariaHiddenPage: true,
+      ariaHiddenPersonnalDataForm: false,
     };
   }
 
@@ -68,6 +98,10 @@ function reducer(state = initialState, action) {
     return {
       ...state,
       isPersonnalDataFormOpen: false,
+      tabIndexPage: 0,
+      tabIndexPersonnalDataForm: -1,
+      ariaHiddenPage: false,
+      ariaHiddenPersonnalDataForm: true,
     };
   }
 
@@ -75,6 +109,10 @@ function reducer(state = initialState, action) {
     return {
       ...state,
       isLegalFormOpen: true,
+      tabIndexPage: -1,
+      tabIndexLegalForm: 0,
+      ariaHiddenPage: true,
+      ariaHiddenLegalForm: false,
     };
   }
 
@@ -82,6 +120,10 @@ function reducer(state = initialState, action) {
     return {
       ...state,
       isLegalFormOpen: false,
+      tabIndexPage: 0,
+      tabIndexLegalForm: -1,
+      ariaHiddenPage: false,
+      ariaHiddenLegalForm: true,
     };
   }
 

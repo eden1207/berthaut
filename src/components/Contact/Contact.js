@@ -7,7 +7,6 @@ import Footer from '../Footer/Footer'
 import ContactMap from '../Map/Map'
 import Form from '../Form/Form'
 import ConfirmWindow from '../ConfirmWindow/ConfirmWindow'
-//import contact_bgd from '../../assets/Belvedere-Bouroullec-Bretagne2.jpg'
 import { GiSmartphone } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
 import PersonnalDataForm from '../PersonnalDataForm/PersonnalDataForm'
@@ -20,6 +19,8 @@ export default function Contact() {
     const isPersonnalDataFormOpen = useSelector((state) => state.isPersonnalDataFormOpen);
     const isLegalFormOpen = useSelector((state) => state.isLegalFormOpen);
     const isFormOpen = useSelector((state) => state.isFormOpen);
+    const tabIndexPage = useSelector((state) => state.tabIndexPage);
+    const ariaHiddenPage = useSelector((state) => state.ariaHiddenPage);
     useEffect(() => {
         if (isPersonnalDataFormOpen || isLegalFormOpen || isFormOpen) {
           document.body.style.overflow = 'hidden';
@@ -31,7 +32,7 @@ export default function Contact() {
     return(
         <div className='Contact Contact_dimensions'>
             <Header />
-            <main>
+            <main aria-hidden={ariaHiddenPage}>
                 <div className='contact-page-container'>
                     <ul className='contact-data contact-red-square-appearence'>
                         <li className='contact-data-element contact-text-appearence'>
@@ -61,24 +62,15 @@ export default function Contact() {
                                 <thead className='tab-head'>
                                     <tr role='row'>
                                         <th
-                                            tabIndex={0} 
-                                            aria-controls='open-hour-table' 
-                                            rowSpan={1} 
-                                            colSpan={1}
+                                            scope="col"
                                         ></th>
                                         <th
-                                            tabIndex={0} 
-                                            aria-controls='open-hour-table' 
-                                            rowSpan={1} 
-                                            colSpan={1}
+                                            scope="col"
                                         >
                                             Matin
                                         </th>
-                                        <th
-                                            tabIndex={0} 
-                                            aria-controls='open-hour-table' 
-                                            rowSpan={1} 
-                                            colSpan={1}
+                                        <th 
+                                            scope="col"
                                         >
                                             Après-midi
                                         </th>
@@ -125,7 +117,8 @@ export default function Contact() {
                         </li>
                         <li>
                             <button 
-                                className='contact-btn contact-text-appearence' 
+                                className='contact-btn contact-text-appearence'
+                                tabIndex={tabIndexPage} 
                                 type="button"
                                 onClick={() => {
                                     dispatch(openForm())
@@ -135,7 +128,7 @@ export default function Contact() {
                             </button>
                         </li>
                     </ul>
-                    <ContactMap className='contact-text-appearence'/>
+                    <ContactMap className='contact-text-appearence' />
                 </div>
                 <div className='contact-bgd contact-gray-square-appearence'></div>
             </main>

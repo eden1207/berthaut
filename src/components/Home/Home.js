@@ -4,7 +4,8 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import PersonnalDataForm from '../PersonnalDataForm/PersonnalDataForm'
 import LegalForm from '../LegalForm/LegalForm'
-import home_page_bgd from '../../assets/jardin-du-parlement1.jpg'
+/*import home_page_bgd from '../../assets/jardin-du-parlement1.jpg'*/
+import home_page_bgd from '../../assets/jardin-du-parlement4.webp'
 import { RxDividerHorizontal } from "react-icons/rx";
 import { useSelector } from 'react-redux'
 
@@ -12,6 +13,7 @@ import { useSelector } from 'react-redux'
 export default function Home() {
     const isPersonnalDataFormOpen = useSelector((state) => state.isPersonnalDataFormOpen);
     const isLegalFormOpen = useSelector((state) => state.isLegalFormOpen);
+    const ariaHiddenPage = useSelector((state) => state.ariaHiddenPage);
     useEffect(() => {
         if (isPersonnalDataFormOpen || isLegalFormOpen) {
           document.body.style.overflow = 'hidden';
@@ -23,7 +25,7 @@ export default function Home() {
     return(
         <div className='Home Home_dimensions'>
             <Header />
-            <main className='main-home'>
+            <main className='main-home' aria-hidden={ariaHiddenPage}>
                 <div className='home-page-bgd-border'>
                     <img src={home_page_bgd} className='home-page-bgd home-photo-appearence' alt='fond page accueil' />
                 </div>

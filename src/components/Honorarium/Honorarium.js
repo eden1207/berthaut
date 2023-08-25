@@ -4,7 +4,7 @@ import './styles/Honorarium.css'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 //import honorarium_page_bgd from '../../assets/pexels-andrew-neel-2312369.jpg'
-import justice_symbole from '../../assets/ecMEMbeei.png'
+import justice_symbole from '../../assets/ecMEMbeei.webp'
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
 import PersonnalDataForm from '../PersonnalDataForm/PersonnalDataForm'
 import LegalForm from '../LegalForm/LegalForm'
@@ -21,6 +21,8 @@ export default function Honorarium() {
 
     const isPersonnalDataFormOpen = useSelector((state) => state.isPersonnalDataFormOpen);
     const isLegalFormOpen = useSelector((state) => state.isLegalFormOpen);
+    const tabIndexPage = useSelector((state) => state.tabIndexPage);
+    const ariaHiddenPage = useSelector((state) => state.ariaHiddenPage);
     useEffect(() => {
         if (isPersonnalDataFormOpen || isLegalFormOpen) {
           document.body.style.overflow = 'hidden';
@@ -51,7 +53,7 @@ export default function Honorarium() {
     return(
         <div className='Honorarium Honorarium_dimensions'>
             <Header />
-            <main className='main-honorarium'>
+            <main className='main-honorarium' aria-hidden={ariaHiddenPage}>
                 <h2 className='honorarium-page-title honorarium-title-appearence'>
                     La rémunération de votre avocat peut se faire par trois moyens, <br/>qui doivent tous être
                     envisagés dépendamment de votre situation.
@@ -62,6 +64,9 @@ export default function Honorarium() {
                         <div className={'honorarium-item ' + classHonorariumConventionAnimation} >
                             <button 
                                 type='button'
+                                tabIndex={tabIndexPage}
+                                aria-expanded={isConventionOpen}
+                                aria-haspopup={true}
                                 className='honorarium-item-btn'
                                 onClick={() => {
                                     setIsConventionBtnActive(true);
@@ -79,7 +84,7 @@ export default function Honorarium() {
                             </button>
                             {
                                 isConventionOpen ? (
-                                    <article className='honorarium-item-article'>
+                                    <article className='honorarium-item-article' tabIndex={tabIndexPage}>
                                         <p>
                                             Il s'agit d'un contrat entre les deux parties qui fixe le montant de la rémunération de
                                             l'avocat selon les critères suivants:
@@ -118,6 +123,9 @@ export default function Honorarium() {
                         >
                             <button 
                                 type='button'
+                                tabIndex={tabIndexPage}
+                                aria-expanded={isHelpOpen}
+                                aria-haspopup={true}
                                 className='honorarium-item-btn'
                                 onClick={() => {
                                     setIsHelpBtnActive(true);
@@ -135,7 +143,7 @@ export default function Honorarium() {
                             </button>
                             {
                                 isHelpOpen ? (
-                                    <article className='honorarium-item-article'>
+                                    <article className='honorarium-item-article' tabIndex={tabIndexPage}>
                                         <p>
                                             L'aide juridictionnelle se traduit par une prise en charge par l'Etat 
                                             des frais de justice, qui comprend notamment la rémunération de l'avocat 
@@ -147,7 +155,7 @@ export default function Honorarium() {
                                             (revenus mensuels, patrimoine mobilier et immobilier).
                                         </p>
                                         <p>
-                                            Une simulation est disponible sur <a target='_blank' rel="noreferrer" href="https://www.service-public.fr/"className='public-service-link'> ce lien</a>.
+                                            Une simulation est disponible sur <a target='_blank' rel="noreferrer" href="https://www.service-public.fr/"className='public-service-link' tabIndex={tabIndexPage}> ce lien</a>.
                                         </p>
                                         <p>
                                             Outre la modestie des ressources du demandeur, il ne faut pas que celui-ci 
@@ -169,6 +177,9 @@ export default function Honorarium() {
                         >
                             <button 
                                 type='button'
+                                tabIndex={tabIndexPage}
+                                aria-expanded={isProtectionOpen}
+                                aria-haspopup={true}
                                 className='honorarium-item-btn'
                                 onClick={() => {
                                     setIsProtectionBtnActive(true);
@@ -186,7 +197,7 @@ export default function Honorarium() {
                             </button>
                             {
                                 isProtectionOpen ? (
-                                    <article className='honorarium-item-article'>
+                                    <article className='honorarium-item-article' tabIndex={tabIndexPage}>
                                         <p>
                                             Dans de nombreux cas, un assuré ne sait pas que son contrat d'assurance prévoit 
                                             une prise en charge des honoraires de l'avocat et autres frais de justice.

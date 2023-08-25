@@ -8,10 +8,17 @@ import { closePersonnalDataForm } from "../Store/Store.js";
 export default function PersonnalDataForm() {
     const dispatch = useDispatch();
     const isPersonnalDataFormOpen = useSelector((state) => state.isPersonnalDataFormOpen);
+    const tabIndexPersonnalDataForm = useSelector((state) => state.tabIndexPersonnalDataForm);
+    const ariaHiddenPersonnalDataForm = useSelector((state) => state.ariaHiddenPersonnalDataForm);
     return isPersonnalDataFormOpen ? (
         <div className="PersonnalDataForm-bgd PersonnalDataForm-bgd_dimensions" role="dialog">
-            <div className="PersonnalDataForm-content PersonnalDataForm-content_dimensions PersonnalDataForm-content_border PersonnalDataForm-content_animation" aria-label="formulaire">
-                <div className='PersonnalDataForm-text'>
+            <div 
+                className="PersonnalDataForm-content PersonnalDataForm-content_dimensions PersonnalDataForm-content_border PersonnalDataForm-content_animation" 
+                aria-label="formulaire"
+                aria-expanded={isPersonnalDataFormOpen}
+                aria-hidden={ariaHiddenPersonnalDataForm}
+            >
+                <div className='PersonnalDataForm-text' tabIndex={tabIndexPersonnalDataForm}>
                     <div className='borderTop'></div>
                     <div className='borderBottom'></div>
                     <div className='borderLeft'></div>
@@ -40,7 +47,7 @@ export default function PersonnalDataForm() {
                         </p>
                         <p>
                             Pour plus d'informations : veuillez consulter  
-                            <a target='_blank' rel="noreferrer" href="https://www.cnil.fr/fr/"className='cnil-link'> ce lien</a>. 
+                            <a target='_blank' rel="noreferrer" href="https://www.cnil.fr/fr/"className='cnil-link' tabIndex={tabIndexPersonnalDataForm}> ce lien</a>. 
                         </p>
                     </section>
                     <section className='section-animation'>
@@ -74,7 +81,8 @@ export default function PersonnalDataForm() {
                     </section>
                 </div>
                 <button 
-                    className="PersonnalDataFormConfirmBtn PersonnalDataFormConfirmBtn_dimensions PersonnalDataFormConfirmBtn_border" 
+                    className="PersonnalDataFormConfirmBtn PersonnalDataFormConfirmBtn_dimensions PersonnalDataFormConfirmBtn_border"
+                    tabIndex={tabIndexPersonnalDataForm} 
                     type="button" onClick={(e) => {
                         e.preventDefault();
                         dispatch(closePersonnalDataForm())

@@ -7,11 +7,18 @@ import { closeLegalForm } from "../Store/Store.js";
 
 export default function LegalForm() {
     const dispatch = useDispatch();
+    const tabIndexLegalForm = useSelector((state) => state.tabIndexLegalForm);
     const isLegalFormOpen = useSelector((state) => state.isLegalFormOpen);
+    const ariaHiddenLegalForm = useSelector((state) => state.ariaHiddenLegalForm);
     return isLegalFormOpen ? (
         <div className="LegalForm-bgd LegalForm-bgd_dimensions" role="dialog">
-            <div className="LegalForm-content LegalForm-content_dimensions LegalForm-content_border LegalForm-content_animation" aria-label="formulaire">
-                <div className='LegalForm-text'>
+            <div 
+                className="LegalForm-content LegalForm-content_dimensions LegalForm-content_border LegalForm-content_animation" 
+                aria-label="formulaire"
+                aria-expanded={isLegalFormOpen}
+                aria-hidden={ariaHiddenLegalForm}
+            >
+                <div className='LegalForm-text' tabIndex={tabIndexLegalForm}>
                     <div className='borderTop'></div>
                     <div className='borderBottom'></div>
                     <div className='borderLeft'></div>
@@ -64,7 +71,8 @@ export default function LegalForm() {
                     </section>
                 </div>
                 <button 
-                    className="LegalFormConfirmBtn LegalFormConfirmBtn_dimensions LegalFormConfirmBtn_border" 
+                    className="LegalFormConfirmBtn LegalFormConfirmBtn_dimensions LegalFormConfirmBtn_border"
+                    tabIndex={tabIndexLegalForm} 
                     type="button" onClick={(e) => {
                         e.preventDefault();
                         dispatch(closeLegalForm())

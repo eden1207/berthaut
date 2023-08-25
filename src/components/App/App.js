@@ -5,10 +5,12 @@ import Home from '../Home/Home.js';
 import Introduction from '../Introduction/Introduction.js';
 import Honorarium from '../Honorarium/Honorarium.js';
 import Contact from '../Contact/Contact.js';
+import ScrollToTop from '../ScrollToTop/ScrollToTop.js';
 
 function App() {
   return (
     <div className="App">
+      <ScrollToTop />
       <Routes>
         <Route path={'/'} element={<Home />} />
         <Route path={'/introduction'} element={<Introduction />} />

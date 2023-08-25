@@ -9,6 +9,7 @@ import LegalForm from '../LegalForm/LegalForm'
 export default function Introduction() {
     const isPersonnalDataFormOpen = useSelector((state) => state.isPersonnalDataFormOpen);
     const isLegalFormOpen = useSelector((state) => state.isLegalFormOpen);
+    const ariaHiddenPage = useSelector((state) => state.ariaHiddenPage);
     useEffect(() => {
         if (isPersonnalDataFormOpen || isLegalFormOpen) {
           document.body.style.overflow = 'hidden';
@@ -20,7 +21,7 @@ export default function Introduction() {
     return(
         <div className='Introduction Introduction_dimensions'>
             <Header />
-            <main className='main-introduction'>
+            <main className='main-introduction' aria-hidden={ariaHiddenPage}>
                 <div className='black-area intro-black-square-appearence'></div>
                 <div className='introduction-container intro-red-square-appearence'>
                     <p className='intro-title-appearence'>

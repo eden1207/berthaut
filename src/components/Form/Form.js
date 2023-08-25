@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './styles/Form.css'
-import close_btn from '../../assets/close.svg'
+import close_btn from '../../assets/close.webp'
 import { FaFileImport } from "react-icons/fa";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -19,7 +19,9 @@ function ErrorMessage({ value, isActive }) {
 
 export default function Form() {
     const dispatch = useDispatch();
+    const tabIndexForm = useSelector((state) => state.tabIndexForm);
     const isFormOpen = useSelector((state) => state.isFormOpen);
+    const ariaHiddenForm = useSelector((state) => state.ariaHiddenForm);
     const [lastName, setLastName] = useState('');
     const [firstName, setFirstName] = useState('');
     const [email, setEmail] = useState('');
@@ -28,10 +30,16 @@ export default function Form() {
     const [isError3, setIsError3] = useState(false);
     return isFormOpen ? (
         <div className="form-bgd form-bgd_dimensions" role="dialog">
-            <div className="form-content form-content_dimensions form-content_border form-content_animation" aria-label="formulaire">
+            <div 
+                className="form-content form-content_dimensions form-content_border form-content_animation" 
+                aria-label="formulaire"
+                aria-expanded={isFormOpen}
+                aria-hidden={ariaHiddenForm}
+            >
                 <button 
                     className="form-close-btn" 
                     type="button" 
+                    tabIndex={tabIndexForm}
                     onClick={() => {
                         dispatch(closeForm())
                     }}
@@ -44,6 +52,7 @@ export default function Form() {
                         <label htmlFor="JS-last">Nom</label><br />
                         <input 
                             className="text-control text-control_dimensions text-control_border" 
+                            tabIndex={tabIndexForm}
                             type="text"
                             id="JS-last"
                             name="last" 
@@ -57,7 +66,8 @@ export default function Form() {
                         />
                         <label htmlFor="JS-first">Prénom</label><br />
                         <input 
-                            className="text-control text-control_dimensions text-control_border" 
+                            className="text-control text-control_dimensions text-control_border"
+                            tabIndex={tabIndexForm} 
                             type="text"
                             id="JS-first" 
                             name="first" 
@@ -72,6 +82,7 @@ export default function Form() {
                         <label htmlFor="JS-email">Email</label><br />
                         <input 
                             className="text-control text-control_dimensions text-control_border"
+                            tabIndex={tabIndexForm}
                             type="email"
                             id="JS-email" 
                             name="email" 
@@ -86,6 +97,7 @@ export default function Form() {
                         <label htmlFor="JS-message">Votre message ici</label><br />
                         <textarea 
                             className="text-control-message text-control-message_dimensions text-control-message_border"
+                            tabIndex={tabIndexForm}
                             type="text"
                             id="JS-message"
                             name="message" 
@@ -96,6 +108,7 @@ export default function Form() {
                             Merci de transmettre vos documents pdf ici 
                             <button 
                                 className='file-btn' 
+                                tabIndex={tabIndexForm}
                                 type="button"
                                 onClick={(e) => {
                                     e.preventDefault()
@@ -107,6 +120,7 @@ export default function Form() {
                         <button 
                             id="JS-btn-submit" 
                             className="btn-submit btn-submit_dimensions btn-submit_border button" 
+                            tabIndex={tabIndexForm}
                             type="submit" onClick={(e) => {
                                 e.preventDefault();
                                 const ckeckingMail = /^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]+$/;
